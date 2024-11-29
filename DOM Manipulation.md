@@ -80,3 +80,47 @@ Similar with client as it provide measurement of the webpage position clicked, b
       });
       input.dispatchEvent(myEvent);
 `
+
+## Event
+
+`  
+  const input = document.querySelector(".input");
+      input.addEventListener("click", (e) => {
+        console.log(`Dispatched`);
+});
+let myEvent = new Event("click", {
+bubble : true,
+cancelable: true
+
+      });
+      input.dispatchEvent(myEvent);
+
+`
+
+**_Note: MouseEvent, KeyboardEvent and Event can be used interchangeably (why because JavaScript allows for flexibility as long as the event type matches the addEventListener event)_**
+
+## Callback Function
+
+**The condition below is used to check if callback is actually a callback function**
+
+`if(callback && typeof callback === "function")`
+## Custom Event
+Apart from having the chance to create your own event using custom event. Custom event also allows you to send various information across the webpage with the event `detail`.
+
+`btn.addEventListener("click", () => {
+        let myEvent = new CustomEvent("textSubmitted", {
+          detail: {
+            message: input.value,
+            text: " !Winner"
+          },
+        });
+        btn.addEventListener("textSubmitted", (e) => {
+          para.textContent = e.detail.message;
+          input.value = "";
+          input.focus();
+        });
+        btn.addEventListener("textSubmitted", (e)=>{
+          code.textContent = e.detail.text
+        })
+        btn.dispatchEvent(myEvent);
+      });`
