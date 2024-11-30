@@ -43,7 +43,6 @@ greet("Prince Obot");
 }
 
 `
-
 ## Usage of console.log and return
 Use return when you want to reuse the specific code in the program.
 use console when you want to display the output.
@@ -143,3 +142,132 @@ map.forEach((value, key) =>{
     if(key > 2)console.log(value)
 })`
 
+### Destructuring, spread operator and rest operator
+
+This `spread` and `rest` operator have the same syntax but serve distinct purpose in application.
+
+**Spread** : it takes an array, object or values that are iterable and return the content of it individual.
+
+*Using string*
+` const val = "57";
+ const checkVal = [...val, 7]
+ console.log(checkVal) // ["5", "7", 7]`
+
+*Using array* 
+`const val = [23, 45];
+ let checkVal = [...val, 7]
+ console.log(checkVal) // [23, 45, 7]
+ `
+*Using object*
+`const val = {name:"Prince", age:30};
+ let checkVal = [{...val}, 7]
+ console.log(checkVal) // [{name:"Prince", age:30}, 7]`
+
+**Rest** 
+It's a way of saying the rest of them(I can't manually begin to type each element or values).
+
+*Easily identify `rest` from `spread`: `rest` always return a new variable *
+
+*Usage in Destructuring *
+` const largeInfo = ["Prince", "Samuel", "Obot", "Alexander"]
+ let [indexOne, ...restOfValue] = largeInfo
+ console.log(indexOne) // "Prince"
+ console.log(restOfValue) // ["Samuel", "Obot", "Alexander"]`
+
+The variable `restOfVariable` is a new variable that holds the rest of the variable.
+
+*In the example for `rest` above, the regular variable is define first before including the `rest` method. this is to say that `rest` method always appears at the last.*
+
+*Usage in function *
+
+`function checkRestOperator(numb1, ...arr){
+  for(i=0; i<arr.length;i++){
+  if(numb1 > arr[i]){
+    console.log(arr[i])
+  }
+  }
+}
+checkRestOperator(1, 3, 7, 8, 0)`
+
+**Destructuring**: it is essentially use for extracting values from object or array.
+
+*Usage in Array*
+
+`const colors = ["Red", "Blue", "Yellow"]
+const [,colorBlue] = colors
+console.log(colorBlue) // "Blue"
+
+*the element blue was extracted from the array*`
+
+*Usage in object *
+
+`const colors = {firstColor: "Red", secondColor: "Blue", third:"Yellow"}
+const {secondColor} = colors
+console.log(secondColor)`
+
+*Usage in nested array*
+
+` { name: 'Alice', skills: ['JS', 'React'], address: { city: 'NY' } },
+    { name: 'Bob', skills: ['Python', 'ML'], address: { city: 'SF' } },
+    { name: 'Charlie', skills: ['HTML', 'CSS'], address: { city: 'Chicago' } }
+];
+//Goal: is to append `favouriteColor : "Yellow" in the first array index i.e data[0].
+
+//learning how to append element or values with destruction, rest or spread?
+
+//1. check the container type of bracket, if its an array or object.
+
+//In this case we have an array followed immediately by an object. so what to do? make sure to destructure the array first, so as to provide the information of the index to be edited.
+const [indexOne, ...restOfArr] = data // the index one of data has been extracted also known as destructuring. secondly: instead of manually declaring each variable for each element index, i use the rest operator.
+let appendingInfo =[
+  {...indexOne, favouriteColor : "Yellow"}, restOfArr
+  ]
+  console.log(appendingInfo)
+  
+  //...indexOne arrange like `name: 'Alice', skills: ['JS', 'React'], address: { city: 'NY' }, favouriteColor : "Yellow" ` and then enclosed in an object.`
+  
+*Usage in  nested object*
+
+`const data = [
+    { name: 'Alice', skills: ['JS', 'React'], address: { city: 'NY' } },
+    { name: 'Bob', skills: ['Python', 'ML'], address: { city: 'SF' } },
+    { name: 'Charlie', skills: ['HTML', 'CSS'], address: { city: 'Chicago' } }
+];
+//Goal: is to append `Grid` in the first array index i.e data[0].skills array.
+
+//learning how to append element or values with destruction, rest or spread?
+
+//1. check the container type of bracket, if its tgat if an array or object.
+
+//In this cade we have an array follow immediately by an object. so what to do? make sure to destructure the array first.
+const [indexOne, ...restOfArr] = data // the index one of data has been extracted also known as destructuring. secondly: instead of nanually declaring each variable for each element index, i use the rest operator.
+let appendingInfo =[
+  {...indexOne, skills:[...indexOne.skills, "Grid"]}, restOfArr
+  ]
+  console.log(appendingInfo)
+  
+  //...indexOne arrange like `name: 'Alice', skills: ['JS', 'React'], address: { city: 'NY' }, favouriteColor : "Yellow" ` and then enclosed in an object.`
+
+*General usage in nested array and object*
+
+`const data = [
+    { name: 'Alice', skills: ['JS', 'React'], address: { city: 'NY' } },
+    { name: 'Bob', skills: ['Python', 'ML'], address: { city: 'SF' } },
+    { name: 'Charlie', skills: ['HTML', 'CSS'], address: { city: 'Chicago' } }
+];
+//Goal: is to append `Grid` in the first array index i.e data[0].skills array.
+
+//learning how to append element or values with destruction, rest or spread?
+
+//1. check the container type of bracket, if its tgat if an array or object.
+
+//In this cade we have an array follow immediately by an object. so what to do? make sure to destructure the array first.
+const [indexOne, ...restOfArr] = data // the index one of data has been extracted also known as destructuring. secondly: instead of nanually declaring each variable for each element index, i use the rest operator.
+let appendingInfo =[
+  {...indexOne, skills:[...indexOne.skills, "Grid"]}, restOfArr
+  ]
+  console.log(appendingInfo)
+  
+  //...indexOne arrange like `name: 'Alice', skills: ['JS', 'React'], address: { city: 'NY' }, favouriteColor : "Yellow" ` and then enclosed in an object.`
+
+*Note :* when they is more than one  array or object in an array, make sure to destruction that scope first.

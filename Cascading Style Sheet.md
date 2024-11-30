@@ -126,7 +126,7 @@ Media query simply means resizing the content of an element when it get a partic
       }`
 `
 ## Semantics element
-This element perform the sam purpose as the div just that it enhances search engine and screen readers.
+This element perform the same purpose as the div just that it enhances search engine and screen readers.
 
 `header` for top
  `nav` for element that's redirects you to different area of the webpage
