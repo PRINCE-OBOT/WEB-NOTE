@@ -1,3 +1,4 @@
+
 ## Datatype
 **Null** this is a datatype that represent nothing but when use in a mathematical expression becomes 1.
 `null * 4 = 0`
@@ -169,6 +170,7 @@ It's a way of saying the rest of them(I can't manually begin to type each elemen
 *Easily identify `rest` from `spread`: `rest` always return a new variable *
 
 *Usage in Destructuring *
+
 ` const largeInfo = ["Prince", "Samuel", "Obot", "Alexander"]
  let [indexOne, ...restOfValue] = largeInfo
  console.log(indexOne) // "Prince"
@@ -270,4 +272,88 @@ let appendingInfo =[
   
   //...indexOne arrange like `name: 'Alice', skills: ['JS', 'React'], address: { city: 'NY' }, favouriteColor : "Yellow" ` and then enclosed in an object.`
 
-*Note :* when they is more than one  array or object in an array, make sure to destruction that scope first.
+*Note :* Use array destruction for array and object Destructuring for object.
+
+### Pure Function 
+It's simply a function with it own rules.
+1. Do not use the a variable outside of the pure function scope - `side effects`- as if the variable value is changed it affects the function making it impure.
+
+2.  Do not directly modify an array or object - `immutability` - as directly modify the array or object outside of its scope, makes it impure. *So what to do?* If you want to use an array or object, you create a duplicate.
+Example: `
+`const arr = [1, 2, 3];
+   function pureFunc(myArr){ const [...rest] = myArr
+   return [...rest, 4]
+   }
+   console.log(pureFunc(arr))
+   console.log(arr)`
+
+3. For the same input the output must be the same - `Deterministic` - 
+
+   Example: `const arr = [1, 2, 3];
+   function pureFunc(myArr){ return [...myArr, 4]
+   }
+   console.log(pureFunc(arr))`
+
+### Recursion
+It's all about function calling it self over and over again.
+
+Example
+`function runRecursive(num){
+if(num <= 0) return 0
+
+return num x runRecursive (num - 1)
+}
+console.log(runRecursive (3))
+`
+HOW THE CODE RUNS
+The initial function is been called and passes the argument 3 to the function.
+`function runRecursive(num){`
+
+The argument value is then checked if it is lesser than 0 in other to return.
+`if(num <= 0) return 0`
+Since it is false, i.e the argument 3 is not lesser than 0, it move to the next line
+
+`return num + runRecursive (num - 1)`
+
+The initial function call seeing a recursion then have to be pause and placed on the call stack.
+example 
+
+**Call stack list**
+`runRecursive(3)
+runRecursive (2)
+runRecursive(1)
+runRecursive (0)`
+
+The recursion begins
+runRecursive (num - 1) = 2.
+The value of `num` is 2
+
+The condition is check if 2 is less than 0, which is false, so it runs the code until it get to the recursion line again and now (num - 1) = 1.
+The value of `num` is 1
+
+The condition is checked if 1 is less than 0, which is false, then it continues until it get to the recursion lines. 
+runRecursive (num - 1) = 0
+The value of `num` is 1.
+
+The condition is checked is num is less than equal 0, which is true, then it returns 0 to 0 in the call stack. 
+Setting `runRecursive(0)` value to 0
+
+This line is now executed 
+`num + runRecursive (num -1)`
+In our call stack tree, the recent recursion value is 0, and the `num` value is 1. Which `1 + 0`
+Which is equal 1.
+The value 1 is then return to the rest of the callstack.
+Meaning the `num` duty ends here, 
+
+So the num
+Is basically there to help perform the first operation and specify the operator to use when unwinding the function
+
+When the value is been returned to the recent stack it then becomes, 
+`1 + 1` = 2
+The results it then added to the last recent callstack 
+`2 + 2` = 4
+And so on
+`4 + 3` = 7
+
+Done
+As the call stack empties, then `7` it is returned to the initial function and displayed with the console.
