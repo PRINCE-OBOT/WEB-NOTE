@@ -1,0 +1,1 @@
+It convert any datatype it contain into aJSON.stringt itUsing Stringm

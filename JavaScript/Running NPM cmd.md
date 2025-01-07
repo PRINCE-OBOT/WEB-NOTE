@@ -1,0 +1,1 @@
+`npm test exerciseName.spec.js`

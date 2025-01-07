@@ -10,19 +10,53 @@
           {
             "id": "1bc4dfeb3fe679ff",
             "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DOM Manipulation.md",
+                "file": "Cascading Style Sheet/Attributes selector.md",
                 "mode": "source",
-                "backlinks": true,
                 "source": false
               },
+              "pinned": true,
               "icon": "lucide-file",
-              "title": "DOM Manipulation"
+              "title": "Attributes selector"
+            }
+          },
+          {
+            "id": "530c158248705c81",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Cascading Style Sheet/Pseudo element selector.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "Pseudo element selector"
+            }
+          },
+          {
+            "id": "25b4f67f3e10a4b4",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "JavaScript/Pattern.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "Pattern"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -96,6 +130,7 @@
         "state": {
           "type": "backlink",
           "state": {
+            "file": "JavaScript/RegExp and Pattern.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -141,14 +176,48 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "zk-prefixer:Create new unique note": false
     }
   },
-  "active": "1bc4dfeb3fe679ff",
+  "active": "25b4f67f3e10a4b4",
   "lastOpenFiles": [
-    "JavaScript.md",
-    "DOM Manipulation.md",
-    "HTML.md",
-    "Cascading Style Sheet.md"
+    "Built-in-function/Untitled.md",
+    "JavaScript/Pattern.md",
+    "Built-in-function/Pattern.md",
+    "JavaScript/RegExp.md",
+    "JavaScript/Objects.md",
+    "Built-in-function/new Set().md",
+    "Built-in-function/Math.abs().md",
+    "Built-in-function/Math.trunc.md",
+    "Built-in-function/Array().md",
+    "Built-in-function/fill().md",
+    "[.md",
+    "Cascading Style Sheet/Pseudo element selector.md",
+    "JavaScript/map, filter, reduce && usecase.md",
+    "Cascading Style Sheet/width (calc).md",
+    "JavaScript/Match and Patterns.md",
+    "JavaScript/replace.md",
+    "Cascading Style Sheet/@media(prefers-color-scheme).md",
+    "Cascading Style Sheet/Use rem instead.md",
+    "Cascading Style Sheet/Attributes selector.md",
+    "Cascading Style Sheet/Selectors.md",
+    "Cascading Style Sheet/Border-position.md",
+    "Cascading Style Sheet/Outline.md",
+    "Cascading Style Sheet/Border-style.md",
+    "Cascading Style Sheet/Radial-gradient.md",
+    "Cascading Style Sheet/Linear-gradient.md",
+    "Cascading Style Sheet/Text-decoration.md",
+    "Untitled.canvas",
+    "Untitled",
+    "Untitled 1",
+    "Exercises",
+    "JavaScript/Exercises",
+    "DOM",
+    "WCAG",
+    "JavaScript",
+    "HTML",
+    "CSS Box Model",
+    "Cascading Style Sheet"
   ]
 }

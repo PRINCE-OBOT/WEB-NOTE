@@ -1,10 +1,174 @@
+
+### input event
+Helps for automatically displaying or executing the typed data immediately without having to click a button.
+
+**HTML**
+`  <input type="text" />
+    <p></p>
+**script**
+const inp = document.querySelector("input")
+const para = document.querySelector("p")
+     
+     inp.addEventListener("input", (e)=>{
+       para.textContent = e.target.value
+     }) `
+
+### focus event 
+focus event fires when you focus or click on input or textarea but it does not bubbles up.
+
+### focusin 
+Fires when you focus on input or textarea, similar with `focus` but it bubbles up the DOM.
+
+### focusout
+Fires when you focus out of the input or selected textarea and it bubbles up to the DOM, meaning it propagate.
+
+### blur
+Fires when you focus out of the input, but it does not propagate.
+
+` <input type="text" />
+
+    <p style="display: none">Enter email</p>
+    
+    
+      const inp = document.querySelector("input")
+      const para = document.querySelector("p")
+      const button = document.querySelector("button")
+     
+  
+    inp.addEventListener("focus", (e)=>{
+      para.style.display = "block"
+    })`
+**Note** : most focus events could be replaced with mouse event but, focus event also respond while the keyboard `tab` is been used to navigate around the input field, whereas mouse event only function using the mouse events.
+
+**Using focus event to do `tooltip`** 
+` <input type="text" />
+    <p style="display: none">Enter email</p>
+    <p style="display:none">Email valid info</p>
+    
+      const inp = document.querySelector("input")
+      const para = document.querySelector("p")
+      const button = document.querySelector("button")
+    inp.addEventListener("focus", (e)=>{
+      para.style.display = "block"
+    })
+    inp.addEventListener("blur", ()=>{
+      setTimeout(()=>{
+        
+      para.style.display = "none"
+      }, 2000)
+    })  
+`
+### change event
+Fires when an input value changes and losses focus
+
+`inp.addEventListener("change", ()=>{
+`p.textContent = inp.value  
+})`
+### form event
+The form event allows for using the button it contain to submit the input information.
+By default a button is set to submit `<button>Submit</button>` when inside of a form, if the type is not explicitly set to`<button type="submit">Submit</button>`if the type is explicitly set to button`<button type="button">Button</button>` then it does not submit information in the form, it can be set to perform other actions.
+
+The addEventlistner is set on the form.
+In other to prevent the form from refreshing each time information is submit you could `e.preventDefault()`
+### animation event
+It has three life cycle 
+1. animationstart : tells when the animation start
+2. animation iteration : tells the animation is in process.
+3. animationend : tells the animation ended.
+
+Animation is a CSS styling property, which by adding JavaScript animation events makes it more interactive.
+
+Example.
+You could write a code with JavaScript to perform an action when an animation in CSS starts, iterates or end.
+
+**Style**
+`  @keyframes mymove{
+      from{scale: 1;}
+      to{scale: 4;}
+    }
+  /*  @keyframes mymove{
+      from{top: 0px;}
+      to{top: 100px;}
+    } */
+    
+ /* @keyframes mymove{
+     from{color: red;}
+      to{color: blue;} // you can also specify `from` as `0%`  - `to` as `100%`
+    }
+    */
+/* * @keyframes mymove {
+  0% { transform: translateX(0) scale(1); }
+  100% { transform: translateX(100px) scale(1.5); }
+  //With the transform keyword the code move from 0px from the x-axis to 100px of the x-axis
+} */*
+
+    
+    #animate-btn{
+    animation: mymove 2s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite; 7;
+    position: absolute;
+    }
+    `
+**HTML**
+`<button>Click Me</button>`
+
+This is just a simple animation that tells button how it will be move around the windows.
+
+### Timing Function 
+By default timing function is set to `ease in` animation but but you can explicitly specify how the timing function should be.
+1. ease :  is it begins slowly, fast in the middle, then slow down when getting to the ending.
+2. ease-out : it begins fast and get slower at the ending.
+3. ease-in: begin slow and get faster at the ending.
+4. ease-in-out : start slowly, speed in the middle and slow again at the ending, just like `ease` but provide more smoother transition from the beginning to the middle and the end
+5. cubic-bezier : it's just a way of specify your own timing function. It has 4 parameters, (x1 y1 x2 y2)
+   With values ranging from 0 - 1,
+   Where 0 means fast
+   And 1 means slow.
+    *note* : it values can still be manipulated depending on how fast the animation should be.
+**y1** : means how fast it should start from the beginning. 
+x1 : how fast it should be when the animation begin. 
+
+*@keyframe* specify the animation range. It is followed by a keyword that references which elements takes the animation.
+
+`#animation-btn` it is just an `id` giving to the button element, where the animation is specify with many other properties. `animation: mymove 2s 7 alternate `
+
+animation-name: The first parameter is the keyword that will be referenced to the keyframe so as to apply the animation range to it. It could be any name of your choice.
+
+animation-delay : The second parameter tells the speed of the transition.
+
+animation-count: The third parameter tells how many times the transition should occur. In this case it is `7` times, you can make it run infinitely by specifying `infinite`
+
+animation-play-state: Allows you to pause or play the animation.
+
+animation-direction: maintain the movement of the animation for both forward and reverse direction.`alternate`
+
+*Applying JavaScript could help with interactive action while these animation is activated.*
+
+**JavaScript**
+`const btn = document.querySelector("button")
+   const p = document.querySelector("p")
+   
+   btn.addEventListener("click", (e)=>{
+     let clickBtn = e.target
+   btn.classList.toggle("animate-btn") 
+   clickBtn.addEventListener("animationstart", ()=>{
+     p.textContent = "Start"
+   }) 
+   clickBtn.addEventListener("animationiteration", ()=>{
+     p.textContent ="Iteration"
+   })
+   clickBtn.addEventListener("animationend", ()=>{
+     p.textContent ="end"
+   })
+   })`
+
+The JavaScript code specify information that will be displayed in each life cycle of the animation using the `p`  element.
 # Keyboard Events
 
-These are events that occur when the keyboard is been pressed
-##Three main keyboard events
+These are events that fires when the keyboard is been pressed
+## Three main keyboard events
 **keydown:** fires as long as the keyboard is been held.
 **keyup:** fires when the keyboard is release.
-**keypress:** fires as long as the keyboard is been held.
+**keypress:** fires when you release the keyboard.
 
 ## Two main properties of keyboard events
 
@@ -124,3 +288,38 @@ Apart from having the chance to create your own event using custom event. Custom
         })
         btn.dispatchEvent(myEvent);
       });`
+
+### createTextNode
+It's basically for interactive appending of text to HTML elements. 
+
+**HTML**
+`<p> Hi </p>
+
+**script**
+ const para = document.querySelector("p")
+ const addText = document.createTextNode('Prince')
+ 
+ para.appendChild(addText)
+`
+
+### parentNode
+As the name imply it is just a parent container.
+
+` .replaceStyle{
+        color: red;
+        background:lightpink;
+        font-weight:700;
+      }`
+
+`  <div class="father">Father            <div class="child">child</div></div>
+
+From the description, `child
+has a parentNode of `father`
+
+`const child = document.querySelector(".child")
+
+child.parentNode.classList.toggle("replaceStyle")`
+
+What the code does is replace the `class` of the child parent and apply the class `replaceStyle` to it.
+
+*Interesting thing is: if there is any styles made already in case with that class name, it then take the style.*

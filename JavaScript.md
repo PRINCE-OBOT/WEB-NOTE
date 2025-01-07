@@ -9,6 +9,20 @@
 `null ** undefined = 1`
 `null * undefined = 0`
 
+## String methods
+**split** : it is use to extract data from a string using it `separator`  converting it into an array. 
+
+Example: 
+`const myName = "Prince"
+  let splitName = myName.split("") //output ["P", "r", "i", "n", "c", "e"]
+  The split method split the string using "" separator and return the output in array. 
+  
+  myName.split("")[0]
+  console.log(splitName) // output ["P"] `
+  
+The split method split the string using "" separator and return the array index [0]
+
+
 ## functions
 **Array inside a function** 
 
@@ -49,7 +63,7 @@ Use return when you want to reuse the specific code in the program.
 use console when you want to display the output.
 
 ## Map
-map are use in place of object when you don't want your code to rely on just retrieving information with just string as in object.
+map are use in place of object when you don't want your code to rely on just retrieving information with just string as it is in object.
 
 **map parameters**
 **key** : it does not rely on string unlike object, it can be literal anything, it is use to get the map value
@@ -167,9 +181,9 @@ This `spread` and `rest` operator have the same syntax but serve distinct purpos
 **Rest** 
 It's a way of saying the rest of them(I can't manually begin to type each element or values).
 
-*Easily identify `rest` from `spread`: `rest` always return a new variable *
+*Easily identify `rest` from `spread`: `rest` always return a new variable 
 
-*Usage in Destructuring *
+*Usage in Destructuring 
 
 ` const largeInfo = ["Prince", "Samuel", "Obot", "Alexander"]
  let [indexOne, ...restOfValue] = largeInfo
@@ -209,9 +223,9 @@ console.log(secondColor)`
 
 *Usage in nested array*
 
-` { name: 'Alice', skills: ['JS', 'React'], address: { city: 'NY' } },
+` [{ name: 'Alice', skills: ['JS', 'React'], address: { city: 'NY' } },
     { name: 'Bob', skills: ['Python', 'ML'], address: { city: 'SF' } },
-    { name: 'Charlie', skills: ['HTML', 'CSS'], address: { city: 'Chicago' } }
+    { name: 'Charlie', skills: ['HTML', 'CSS'], address: { city: 'Chicago' } }]
 ];
 //Goal: is to append `favouriteColor : "Yellow" in the first array index i.e data[0].
 
@@ -261,10 +275,10 @@ let appendingInfo =[
 
 //learning how to append element or values with destruction, rest or spread?
 
-//1. check the container type of bracket, if its tgat if an array or object.
+//1. check the container type of bracket, if its an array or object.
 
-//In this cade we have an array follow immediately by an object. so what to do? make sure to destructure the array first.
-const [indexOne, ...restOfArr] = data // the index one of data has been extracted also known as destructuring. secondly: instead of nanually declaring each variable for each element index, i use the rest operator.
+//In this case we have an array follow immediately by an object. so what to do? make sure to destructure the array first.
+const [indexOne, ...restOfArr] = data // the index one data has been extracted also known as destructuring. secondly: instead of manually declaring each variable for each element index, i use the rest operator.
 let appendingInfo =[
   {...indexOne, skills:[...indexOne.skills, "Grid"]}, restOfArr
   ]
@@ -357,3 +371,26 @@ And so on
 
 Done
 As the call stack empties, then `7` it is returned to the initial function and displayed with the console.
+
+### for loop
+shorthand for running infinity loop.
+`for(;;) 
+`{let myName = prompt('Enter my name')
+`` if(myName === "Prince")break;
+`}`
+
+## String()
+It convert everything it contains into a string.
+
+Example:
+`const arr = [12, 34]
+`String(arr) // 12, 34`
+
+Except it inability to see through object.
+
+`const obj = {name : "Prince"}
+`String(arr) // [object, object]`
+
+Inorder to see through the content of object, use.
+
+`JSON.stringify(obj)` // {name : "Prince" }
