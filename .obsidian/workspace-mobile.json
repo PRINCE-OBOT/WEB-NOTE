@@ -54,9 +54,39 @@
               "icon": "lucide-file",
               "title": "Pattern"
             }
+          },
+          {
+            "id": "2fba49b08797eb86",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "XML/Path Attributes.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "Path Attributes"
+            }
+          },
+          {
+            "id": "b3c83e15211ae838",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "JavaScript/Repeat.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Repeat"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -130,7 +160,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "JavaScript/RegExp and Pattern.md",
+            "file": "JavaScript.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -180,36 +210,36 @@
       "zk-prefixer:Create new unique note": false
     }
   },
-  "active": "25b4f67f3e10a4b4",
+  "active": "b3c83e15211ae838",
   "lastOpenFiles": [
+    "JavaScript/Call.md",
+    "JavaScript/Repeat.md",
+    "JavaScript/Math.ceil().md",
+    "JavaScript.md",
+    "JavaScript/Test.md",
     "Built-in-function/Untitled.md",
-    "JavaScript/Pattern.md",
-    "Built-in-function/Pattern.md",
-    "JavaScript/RegExp.md",
     "JavaScript/Objects.md",
-    "Built-in-function/new Set().md",
-    "Built-in-function/Math.abs().md",
-    "Built-in-function/Math.trunc.md",
-    "Built-in-function/Array().md",
-    "Built-in-function/fill().md",
-    "[.md",
-    "Cascading Style Sheet/Pseudo element selector.md",
-    "JavaScript/map, filter, reduce && usecase.md",
-    "Cascading Style Sheet/width (calc).md",
-    "JavaScript/Match and Patterns.md",
-    "JavaScript/replace.md",
-    "Cascading Style Sheet/@media(prefers-color-scheme).md",
-    "Cascading Style Sheet/Use rem instead.md",
-    "Cascading Style Sheet/Attributes selector.md",
-    "Cascading Style Sheet/Selectors.md",
-    "Cascading Style Sheet/Border-position.md",
-    "Cascading Style Sheet/Outline.md",
-    "Cascading Style Sheet/Border-style.md",
-    "Cascading Style Sheet/Radial-gradient.md",
-    "Cascading Style Sheet/Linear-gradient.md",
-    "Cascading Style Sheet/Text-decoration.md",
+    "JavaScript/new Set().md",
+    "Cascading Style Sheet/Perspective.md",
+    "Cascading Style Sheet/Transform.md",
+    "Cascading Style Sheet/Untitled.md",
+    "XML/SVG.md",
+    "Cascading Style Sheet/Transform-origin.md",
+    "h.md",
+    "XML/Patterns.md",
+    "XML/Path Attributes.md",
+    "README.md",
+    "DOM Manipulation.md",
+    "HTML.md",
+    "XML/Morphing.md",
+    "HTML/Path Attributes (SVG).md",
+    "HTML/SVG.md",
+    "XML",
+    "HTML/Emmet.md",
     "Untitled.canvas",
-    "Untitled",
+    "202501111211.md",
+    "[.md",
+    "HTML/HTML elements reference.md",
     "Untitled 1",
     "Exercises",
     "JavaScript/Exercises",

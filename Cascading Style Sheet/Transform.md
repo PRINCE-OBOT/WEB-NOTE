@@ -8,9 +8,14 @@ The code above is the same as
 
 **Rotate** simply rotate the element.
 
-**Transform** determine how it is positioned around horizontal or vertical axis.
+**Translate** determine how it is positioned around horizontal or vertical axis.
 
 **Scale** tend to zoom in or zoom out the element.
 
 **Skew** determine how the edge of the element will be.
 
+*We've got rotateX() and rotateY() too*
+
+**rotateX(40)**: by default places a pivot(hinge) horizontally on the centre. (Imagining how a swing look) And then rotate the swing to 40deg.
+
+**rotateY(40)**: by default places a pivot(hinge) vertically on the centre. (Imagining how a swing look) And then rotate the swing to 40deg

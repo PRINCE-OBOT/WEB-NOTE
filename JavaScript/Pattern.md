@@ -9,6 +9,8 @@ let myName = "New Year, Hurray"
 
 `n*`  //Find `n` from the beginning and returns also returns multiple  `n` if they are join together. **Note** : it returns  empty string `""` if the search is not found.
 
+`n?` //It works the same `n*` because it returns an empty string if the search is not found, but it returns the search character separately.
+
 `/H...ay/` // Matches `Hurray` in the string or any other word with any word that can replace the three characters.
 
 `/r{2}/` // Matches the character `r` that are join together.
@@ -18,3 +20,18 @@ let myName = "New Year, Hurray"
 `/^.{2}/` // Explicitly forcing it to match from the beginning.
 
 `/.{2}$/` // Matches any two characters from behind.
+
+`/a|b/`   //a or b 
+**It first find `r` if it does not find it, then find the next match `P`
+
+`const myName = 'Prince'`
+`myName.match(/r|P/)` // ['P']
+
+`[a-z]` //Returns all character that falls between the range.
+
+`[0-9]` //Returns all number that falls between the range.
+
+`[^abc]` //Return character that are     not in this range
+
+`const myName = 'Prince'`
+`myName.match(/[^abc]/)` // ['P', 'r', 'i', 'n', 'e'] 
