@@ -21,8 +21,8 @@ Then you decide how many rows and column you want your layout to have by setting
 
 ## Psuedo element
 
-`button::active{color: red}`: it activate when the button is click.
-`button::hover{color: red}`: it activate when you hover around the element.
+`button:active{color: red}`: it activate when the button is click.
+`button:hover{color: red}`: it activate when you hover around the element.
 `input::placeholder{font-size:23px}`: it is use to change the edit input placeholder.
 `button::before{text-content: "Hi"}`: It is use to append text before the element.
 `button::after{text-content: "Hi"}`: It is use to append text after the element.

@@ -299,6 +299,16 @@ let obj = new Object({
 
 **Note** ensure to include the `new` keyword when calling the function constructor.
 
+
+### Accessing the function values without the new keyword
+
+` function sayHi(mood){
+    this.nick = 'Happy'
+  }
+  
+ `sayHi('Happy')
+  `console.log(this.nick)`
+
 ### Pushing an object into an array using map
 `let john = { name: "John", surname: "Smith", id: 1 };
 let pete = { name: "Pete", surname: "Hunt", id: 2 };

@@ -1,0 +1,149 @@
+Is used to group or organize SVG element. They do not represent visual content by themselves.
+
+### `<a>` (anchor) :  For linking web pages 
+`<a href="www.google.com">//
+`Provide svg shape or text </a>`
+
+### `<def>`(definition): It is to avoid repeating of svg element
+ `<defs>
+  `<linearGradient id="gradient">
+    `<stop offset="0%" stop-color="red" />
+    `<stop offset="100%" stop-color="blue" />
+  `</linearGradient>
+`</defs>
+
+The linear gradient color can be reused in different shapes using the **id** name, without re-creating another linear-gradient.
+
+Example:
+`<rect fill="url(#gradient)" rx="10" ry="10" width="100" height="100" />`
+
+### `g` (Grouping) : styles applied in the group element is inherited by all elements it contain accept explicitly change
+
+  `<g fill="red">
+  `<rect x="3" y="3" width="10" height="10" />
+  `<circle cx="16" cy="7.5" r="3" />
+ `</g>
+
+The color red is `filled` into `rect` and `circle` shapes.
+
+### `marker`: It is used to add simple shapes around shapes, mostly used for arrowhead
+
+` <defs>
+    `<marker id="arrow" markerWidth="30" markerHeight="10" refX="10" refY="0" orient="auto">
+    `<path d="M0,0 L10,5 L0,10 Z" fill="red" />
+    `</marker>`
+`</defs>`
+
+` <path d="M50,100 L300,100" stroke="black" stroke-width="2" marker-start="url(#arrow)" />`
+
+**markerWidth:** defines the viewBox width of the content (Arrow head in this case).
+
+**markerHeight:** defines the viewBox height of the content (Arrow head in this case).
+
+**refX**: 0 means the start point of the `L` arrowHead, when increase it pushes the shape backward.
+
+**refY**: 0 means the start point of the `L` arrowHead, when increase it changes the position relatively to the arrowHead vertically.
+
+**orient:** It is used for orientating the shape, `auto` means way the shape is draw, it can be 20, 40...
+
+___The you can call it to the shapes___ using **marker-start, marker-mid or marker-end**
+
+**Note** : In order to provide the **marker-mid**, your shapes or line must have a mid part.
+
+### `mask` : It is used to determine which shape should be displayed or not
+
+*White means : transparent*
+*Black means : visible*
+  `<defs>`
+    `<mask id="myMask">`
+      ` <rect x="0" y="0" width="400" height="200" fill="white" />` // This will not be visible as the color is white
+      `<circle class="cir" cx="200" cy="100" r="50" fill="black" />`
+     `</mask>`
+`</defs>`
+
+  `<rect class="content" x="50" y="50" width="300" height="50" fill="orange" mask="url(#myMask)" />`//The shapes is then called here.
+  
+**Note**: The rect `content` class then becomes the sub-viewBox for the shape.
+
+### Pattern
+### Attributes
+**id**: it uniquely identifies the pattern, and it is use to reference the element that uses the id.
+
+**width && height**: it act as a sub-viewBox for element the pattern would contain.
+
+**patternUnits**: It can either be *userSpaceOnUse* or *object...*
+
+It is set to *object...* by default meaning it does not fill up the width and height element that is reference with the pattern tile.
+
+**userSpaceOnUse**: fill up the width and height that is reference with the pattern tile.
+
+
+`<defs>
+`<pattern id="checkboard" width="200" height="105" patternUnits="userSpaceOnUse">
+`<rect x="0" y="0" width="95" height="100" fill="black" />
+`<rect x="100" y="0" width="95" height="100" fill="white" />
+ `</pattern>
+  `</defs>
+
+`<rect fill="url(#checkboard)" x="3" y="3" width="40" height="40"/>`
+
+**The `rect` element inside the pattern element share the width and height for themselves.**
+
+### SVG
+
+### switch : works as the regular switch statement, it return one of what meet the condition
+
+#### Attributes to Use:
+
+**requiredFeatures**: Checks if a specific feature is supported by the browser.
+
+**requiredExtensions**: Checks if a specific extension is supported.
+
+**systemLanguage**: Matches based on the language of the user’s system.
+#### **Using** `systemLanguage`
+
+`<svg width="200" height="100">
+  `<switch>
+    `<text systemLanguage="en" x="10" y="30">Hello</text>
+    `<text systemLanguage="en-NG" x="10" y="30">Hola</text>
+   `<text x="10" y="30">Default Text</text>
+  `</switch>
+`</svg> `
+
+**The content that pass the test fit relative to the `SVG` width and height.**
+
+### Using `requiredFeatures` 
+
+`requireFeatures` is not reliable in most browsers as it does not actually rely on the condition giving rather it just runs the first condition.
+
+**Example**:
+`<switch>
+    <!-- This will render only if the browser supports gradients -->
+    `<text requiredFeatures="http://www.w3.org/TR/SVG11/feature#Gradient" x="10" y="50" font-size="24">
+      Your browser supports gradients!
+    `</text>
+    <!-- Fallback -->
+    `<text x="10" y="80" font-size="24">
+      `Gradients are not supported on your browser.
+    `</text>
+ `</switch> `
+
+ 
+   ***Altered***
+`<text requiredFeatures="http://www.w3.org/TR/SVG11/" x="10" y="50" font-size="24">
+      Your browser supports gradients!
+`</text>
+    
+*Altering the first `requireFeature` attributes does not actually make the second `requireFeature` attributes execute.
+
+**Note**: The attributes of `switch` as not consistent and reliable as many browser does not check for the validation of the condition (Same thing applicable to `requireExtension`. 
+
+### Symbol : basically use for re-using shapes 
+
+`<symbol id="circleIcon" viewBox="0 0 50 50">
+   `<circle cx="25" cy="25" r="30" fill="blue" />
+`</symbol>
+ `<use xlink:href="#circleIcon" x="0" y="0" />`
+ // `<use href="#circleIcon" x="0" y="0" />`
+
+**Note**: Ensure to use the `xlink:href` (for old browser) or `href` (updated browser) when using the `use` property. 
