@@ -52,8 +52,28 @@ ___The you can call it to the shapes___ using **marker-start, marker-mid or mark
 
 ### `mask` : It is used to determine which shape should be displayed or not
 
-*White means : transparent*
-*Black means : visible*
+1. Black (fill="black") → Fully Transparent
+
+Any black area in the mask completely hides the corresponding part of the element.
+
+2. White (fill="white") → Fully Visible
+
+Any white area in the mask fully reveals the corresponding part of the element.
+
+3. Gray (fill="gray") → Partial Transparency
+
+Any shade of gray results in partial transparency.
+
+Example: fill="rgb(128,128,128)" or fill="gray" makes the element 50% transparent.
+
+4. Alpha (Opacity) Matters
+
+You can use fill="white" opacity="0.5" to make an area semi-transparent instead of using gray.
+
+5. Default Background of the Mask is Black
+
+If a mask doesn’t fully cover an element with white or gray, the default black background will make the rest of the element fully transparent.
+
   `<defs>`
     `<mask id="myMask">`
       ` <rect x="0" y="0" width="400" height="200" fill="white" />` // This will not be visible as the color is white
@@ -63,7 +83,7 @@ ___The you can call it to the shapes___ using **marker-start, marker-mid or mark
 
   `<rect class="content" x="50" y="50" width="300" height="50" fill="orange" mask="url(#myMask)" />`//The shapes is then called here.
   
-**Note**: The rect `content` class then becomes the sub-viewBox for the shape.
+**Note**: The position of the mask item is relative to svg viewBox.
 
 ### Pattern
 ### Attributes

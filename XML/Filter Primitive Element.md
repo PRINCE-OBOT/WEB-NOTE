@@ -109,7 +109,9 @@ Like difference, but with lower contrast.
 
 ### feColorMatrix
 
-is an SVG filter that changes the colors of an image, shape, or text. It works like an Instagram filter but gives you full control over how colors change.
+*It is best for **hue** and for making color **gray-scale**
+
+is an SVG filter that changes the colors of an image. 
 
 **Type attributes of feColorMatrix
 
@@ -161,3 +163,129 @@ New Green = (R * b1) + (G * b2) + (B * b3) + (A * b4) + b5
 New Blue  = (R * c1) + (G * c2) + (B * c3) + (A * c4) + c5
 New Alpha = (R * d1) + (G * d2) + (B * d3) + (A * d4) + d5
 
+*Finally you then call the filtered format using*
+
+`filter="url(#filtered)"`
+
+### feComponentTransfer
+
+*It is best for **brightening** or **darkening** image color*
+
+ is used to adjust the intensity of each color channel (red, green, blue) and the alpha (opacity) of an image or shape. It allows you to manipulate how colors appear, enabling effects like brightness adjustment, contrast enhancement, and gamma correction.
+
+`<defs>
+`<filter id="brighten">
+    `<feComponentTransfer>`
+       //feComponentTransfer functions is contained here.
+`</feComponentTransfer>
+`</filter>
+  `</defs>`       
+
+**How It Works**
+
+Inside `<feComponentTransfer>`, you define functions for each color channel using:
+
+`<feFuncR>` – Red channel
+
+`<feFuncG>` – Green channel
+
+`<feFuncB>` – Blue channel
+
+`<feFuncA>` – Alpha (opacity) channel
+
+Each function has a type attribute to specify the transformation, like **identity**, **linear**, or **gamma**.
+
+1. **Linear** is used if you want equal simple brightness or hue.
+
+2. **Gamma** is used to add brightness or effects in the mid tone. (mid tone refers to colors in the image that is neither dark or light, just in between).
+
+3. **Identity**: It keeps the color the way it is, I does not change the colour value.
+
+4. **Table**: It is used for remapping the color in the image.
+
+*Linear Application*
+
+`<feFuncR type="linear" slope="0.8"/>
+`<feFuncG type="linear" slope="0.8"/>
+`<feFuncB type="linear" slope="1"/>`
+
+**Linear**: ensures the colors are distributed evenly in the image.
+
+**Slope**: define how bright or contrast the image is.
+
+
+*Gamma Application*
+
+` <feFuncR type="gamma" amplitude="1" exponent="1"/>
+`<feFuncG type="gamma" amplitude="1" exponent="1"/>
+`<feFuncB type="gamma" amplitude="1" exponent="1"/>`
+
+**Amplitude** is used to make the photo appear brighter or darker. 
+
+**Exponent** lets you fine-tune the contrast.
+
+_______________________
+
+**Note**: There is no fix maximum value for attributes of `feFunc.`. Value ranges between **0** and **1**
+
+**1** : increases 
+**0** : decreases 
+
+_______________________
+
+*Identity Application*
+
+`<feFuncR type="identity" />`
+
+**Identity**: do not change the value of red (unchanged).
+
+
+*Table Application*
+
+**Specifying a single value in tableValue**
+
+`<feFuncR type="table" tableValues="0" />`
+
+
+0: removes red from the image.
+1 : makes the image red, even the dark part of the image becomes bright red.
+
+**Specifying two value in tableValue**
+
+`<feFuncR type="table" tableValues="0 1" />`
+
+**first parameter** keep dark unchanged 
+**second parameter** keep red unchanged
+
+### feGaussianBlur
+
+It's used to blur image
+
+`<feGaussianBlur in="SourceGraphic" stdDeviation="0" />`
+
+**in**: defines the image that takes the blur.  In this case it is the image that has the `filter id`
+
+**stdDeviation**: defines how blurry the image will be.
+
+**Default value** 0
+As the value increases the blur increases.
+
+**Applying feBlend together with blur**
+
+`<feGaussianBlur stdDeviation="1" />`
+
+`<feBlend in="SourceGraphic" mode"multiply" />`
+
+### feFlood 
+It is used to create solid colour.
+`<filter id="solid-color" >`
+    `<feFlood flood-color="red" />`
+`</filter>`
+
+` <rect x="0" y="0" width="50%" height="50%" filter="url(#solid-color)" />`
+
+### feImage
+
+It is best used if you want to blend images together using `feBlend` otherwise use `image`.
+
+`<feImage x="" y="" width="100%" height="100%" href="./pic.jpg" />`
