@@ -1,3 +1,16 @@
+### filter
+
+Is a container element that contains the filter primitive element.
+
+By default, the filter element in SVG has these values:
+
+x: -10%
+y: -10%
+width: 120%
+height: 120%
+
+**The default width="120%" and height="120%" are relative to the bounding box of the shape or image being filtered, not the SVG viewBox.**
+
 ### feBlend 
 it is used for keeping an image or shapes on top another
 
@@ -289,3 +302,42 @@ It is used to create solid colour.
 It is best used if you want to blend images together using `feBlend` otherwise use `image`.
 
 `<feImage x="" y="" width="100%" height="100%" href="./pic.jpg" />`
+
+###   feOffset 
+
+It is used to shift an image or shape.
+
+*Positive **dx** value shift the shape from the left, negative **dx** value shift the shape from the right.*
+
+*Positive **dy** value shift the shape from the top, negative **dy** value shift the shape from bottom.
+
+`<feOffset in="SourceGraphic" dx="40" dy="40"/>`
+
+`feOffset in="SourceAlpha" dx="40" dy="40"/>`
+
+### feMerge 
+
+It gives you a chance to used multiple filter together.
+
+It is used to combine multiple filter effects into one. 
+
+`<svg width="200" height="200">
+  `<defs>
+    `<filter id="mergeFilter">
+      `<feOffset in="SourceAlpha" dx="5" dy="5" result="offsetEffect"/>
+     `<feGaussianBlur in="offsetEffect" stdDeviation="2" result="blurEffect"/>
+      `<feMerge>
+        `<feMergeNode in="blurEffect"/>
+        `<feMergeNode in="SourceGraphic"/>
+      `</feMerge>
+   `</filter>
+  `</defs>
+
+  `<rect x="50" y="50" width="100" height="100" fill="blue" filter="url(#mergeFilter)"/>
+`</svg>`
+
+*The process proceed in order. First the **feOffSet** is defined, contained with the **result** attributes which the at as a reference for the **feGassiunBlur** to apply the blur, which also contained the **result** attributes which is later referenced by the **feMerge**.
+
+The **feMerge** has two attributes. From the code the first `in` is the cloned shape that has pass through process of `feOffset` and `feGassiunBlur` the second `in` is the shape that the style will be applied to.
+
+The order the `feMergeNode` is arrange in `feMerge` determine which will be in front, either the clone version or the original version.

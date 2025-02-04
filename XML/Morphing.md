@@ -1,7 +1,7 @@
-Simply is the transformation of shape over time.
+Is the transformation of shape over time.
 ### Things to consider for morphing to work
 
-**The same Command Sequence** (ML)
+**The same Command Sequence**
 
 **The same number of point** : In the sense that both path has two points of interception.
 

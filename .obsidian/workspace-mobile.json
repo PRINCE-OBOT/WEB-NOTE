@@ -104,17 +104,17 @@
             }
           },
           {
-            "id": "bf18aa4f230dafe0",
+            "id": "b596624f06130c7e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "XML/Filter Primitive Element.md",
+                "file": "XML/Image.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Filter Primitive Element"
+              "title": "Image"
             }
           }
         ],
@@ -133,7 +133,8 @@
         "state": {
           "type": "file-explorer",
           "state": {
-            "sortOrder": "alphabetical"
+            "sortOrder": "alphabetical",
+            "autoReveal": false
           },
           "icon": "lucide-folder-closed",
           "title": "Files"
@@ -192,7 +193,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "XML/Filter Primitive Element.md",
+            "file": "XML/text.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -242,34 +243,34 @@
       "zk-prefixer:Create new unique note": false
     }
   },
-  "active": "bf18aa4f230dafe0",
+  "active": "b596624f06130c7e",
   "lastOpenFiles": [
+    "XML/text.md",
     "XML/SVG Container Element.md",
+    "Pasted image 20250204104649.jpg",
     "XML/Filter Primitive Element.md",
-    "JavaScript/indexOf.md",
-    "XML/SVG Gradients Element.md",
     "XML/Path Attributes.md",
-    "XML/Image.md",
-    "Cascading Style Sheet/Attributes selector.md",
+    "XML/SVG shapes.md",
+    "XML/SVG Painting Property.md",
+    "Built-in-function/Array.isArray.md",
+    "202502031123.md",
+    "XML/SVG Shapes.md",
+    "XML/Morphing.md",
     "XML/SVG.md",
+    "XML/SVG Gradients Element.md",
+    "XML/Image.md",
+    "XML/Shapes and text.md",
+    "JavaScript/indexOf.md",
+    "Cascading Style Sheet/Attributes selector.md",
     "Cascading Style Sheet.md",
     "DOM Manipulation.md",
     "HTML.md",
     "Cascading Style Sheet/transition-behavior.md",
     "Cascading Style Sheet/Transition.md",
-    "XML/Morphing.md",
     "JavaScript/Pattern.md",
     "JavaScript/RegExp.md",
     "Exercises/FIBONACCI.md",
     "XML/Hello.md",
-    "XML/Oreview.md",
-    "XML/Hi.md",
-    "202501241040.md",
-    "XML/Happy.md",
-    "XML/back.md",
-    "XML/Filter primitive Element.md",
-    "HTML/Emmet.md",
-    "XML/Patterns.md",
     "Untitled",
     "XML",
     "Untitled.canvas",

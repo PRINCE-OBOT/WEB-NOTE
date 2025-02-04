@@ -4,6 +4,16 @@ Is used to group or organize SVG element. They do not represent visual content b
 `<a href="www.google.com">//
 `Provide svg shape or text </a>`
 
+| Attribute      | Description                                                            |
+| -------------- | ---------------------------------------------------------------------- |
+| href           | The URL to go to                                                       |
+| download       | Tells the browser to download the URL instead of go to it              |
+| hreflang       | The language of the page the link points to                            |
+| referrerpolicy | The referrer to send when fetching the URL                             |
+| rel            | The relationship of the target object to the link object               |
+| target         | Where to open the link. Can be _self, _parent, _top, _blank, or a name |
+| type           | The MIME type for the linked URL                                       |
+
 ### `<def>`(definition): It is to avoid repeating of svg element
  `<defs>
   `<linearGradient id="gradient">
@@ -16,6 +26,7 @@ The linear gradient color can be reused in different shapes using the **id** nam
 
 Example:
 `<rect fill="url(#gradient)" rx="10" ry="10" width="100" height="100" />`
+
 
 ### `g` (Grouping) : styles applied in the group element is inherited by all elements it contain accept explicitly change
 
@@ -49,6 +60,7 @@ The color red is `filled` into `rect` and `circle` shapes.
 ___The you can call it to the shapes___ using **marker-start, marker-mid or marker-end**
 
 **Note** : In order to provide the **marker-mid**, your shapes or line must have a mid part.
+
 
 ### `mask` : It is used to determine which shape should be displayed or not
 
@@ -85,8 +97,11 @@ If a mask doesn’t fully cover an element with white or gray, the default black
   
 **Note**: The position of the mask item is relative to svg viewBox.
 
+
 ### Pattern
-### Attributes
+
+**Attributes** 
+
 **id**: it uniquely identifies the pattern, and it is use to reference the element that uses the id.
 
 **width && height**: it act as a sub-viewBox for element the pattern would contain.
@@ -109,7 +124,9 @@ It is set to *object...* by default meaning it does not fill up the width and he
 
 **The `rect` element inside the pattern element share the width and height for themselves.**
 
+
 ### SVG
+
 
 ### switch : works as the regular switch statement, it return one of what meet the condition
 
