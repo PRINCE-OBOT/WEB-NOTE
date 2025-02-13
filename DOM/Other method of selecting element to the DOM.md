@@ -1,8 +1,4 @@
-` <div class="con">con
-   <div class="child">
-   
-   </div>
- </div>
+` <div class="con"> con </div>
 
 
 **As long as the element exist in the DOM , it can be made reference to when selecting the node 

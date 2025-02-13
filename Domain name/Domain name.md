@@ -1,0 +1,3 @@
+Domain name is a human-friendly identifier for a website, but it does not identify an IP address directly. Instead, it is linked to an IP address through the Domain Name System (DNS).
+
+Domain Name System (DNS) are different things. A domain name is the human-readable address of a website (like google.com), while DNS is the system that translates that domain name into an IP address that computers can understand.

@@ -58,3 +58,6 @@ The `<textPath>` element has six basic attributes:
 | spacing      | The space between glyphs. Can be auto\|exact. Default is exact                                                                                 |
 | startOffset  | How far the beginning of the text should be offset from the beginning of the path. Can be a length, percentage or a number                     |
 | textLength   | The width of the text along the path. Can be a length, percentage or a number. Default is auto                                                 |
+`<text fill="red">
+  `<textPath href="#textP">Running aling tge line</textPath>
+ `</text>`

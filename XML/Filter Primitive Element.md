@@ -303,7 +303,7 @@ It is best used if you want to blend images together using `feBlend` otherwise u
 
 `<feImage x="" y="" width="100%" height="100%" href="./pic.jpg" />`
 
-###   feOffset 
+### feOffset 
 
 It is used to shift an image or shape.
 
@@ -341,3 +341,24 @@ It is used to combine multiple filter effects into one.
 The **feMerge** has two attributes. From the code the first `in` is the cloned shape that has pass through process of `feOffset` and `feGassiunBlur` the second `in` is the shape that the style will be applied to.
 
 The order the `feMergeNode` is arrange in `feMerge` determine which will be in front, either the clone version or the original version.
+
+### feDropShadow
+
+The `<feDropShadow>` filter is used to create a drop shadow effect on the input graphic:
+
+`<svg height="110" width="110" xmlns="http://www.w3.org/2000/svg">
+  `<defs>
+    `<filter id="f1">
+      `<feDropShadow dx="12" dy="14" stdDeviation="1" flood-opacity="0.7"/>
+    `</filter>
+  `</defs>
+  `<rect width="90" height="90" fill="yellow" filter="url(#f1)" />
+`</svg>`
+
+- The `id` attribute of the `<filter>` element defines a unique name for the filter
+- The drop shadow effect is defined with the `<feDropShadow>` element
+- The `dx` attribute defines the x offset of the drop shadow
+- The `dy` attribute defines the y offset of the drop shadow
+- The `stdDeviation` attribute defines the amount of the blur in the drop shadow
+- The `flood-opacity` attribute defines the opacity of the drop shadow (from 0 to 1)
+- The `filter` attribute of the `<rect>` element points the element to the "f1" filter

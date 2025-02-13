@@ -1,6 +1,7 @@
 Is used to group or organize SVG element. They do not represent visual content by themselves.
 
-### `<a>` (anchor) :  For linking web pages 
+### `a` (anchor) 
+For linking web pages 
 `<a href="www.google.com">//
 `Provide svg shape or text </a>`
 
@@ -14,7 +15,8 @@ Is used to group or organize SVG element. They do not represent visual content b
 | target         | Where to open the link. Can be _self, _parent, _top, _blank, or a name |
 | type           | The MIME type for the linked URL                                       |
 
-### `<def>`(definition): It is to avoid repeating of svg element
+### `def`(definition)
+It is to avoid repeating of svg element
  `<defs>
   `<linearGradient id="gradient">
     `<stop offset="0%" stop-color="red" />
@@ -28,7 +30,8 @@ Example:
 `<rect fill="url(#gradient)" rx="10" ry="10" width="100" height="100" />`
 
 
-### `g` (Grouping) : styles applied in the group element is inherited by all elements it contain accept explicitly change
+### `g` (Grouping) 
+styles applied in the group element is inherited by all elements it contain accept explicitly change
 
   `<g fill="red">
   `<rect x="3" y="3" width="10" height="10" />
@@ -37,7 +40,8 @@ Example:
 
 The color red is `filled` into `rect` and `circle` shapes.
 
-### `marker`: It is used to add simple shapes around shapes, mostly used for arrowhead
+### `marker`
+It is used to add simple shapes around shapes, mostly used for arrowhead
 
 ` <defs>
     `<marker id="arrow" markerWidth="30" markerHeight="10" refX="10" refY="0" orient="auto">
@@ -61,16 +65,24 @@ ___The you can call it to the shapes___ using **marker-start, marker-mid or mark
 
 **Note** : In order to provide the **marker-mid**, your shapes or line must have a mid part.
 
-
-### `mask` : It is used to determine which shape should be displayed or not
+| Attributes   | Description                                                                                                                          |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| id           | The unique id for the marker                                                                                                         |
+| markerHeight | The height of the marker. Default is 3                                                                                               |
+| markerWidth  | The width of the marker. Default is 3                                                                                                |
+| refX         | The x position where the marker connects with the vertex. Default is 0                                                               |
+| refY         | The y position where the marker connects with the vertex. Default is 0                                                               |
+| orient       | The orientation of the marker relative to the shape it is attached to. Can be "auto", "auto-start-reverse" or an angle. Default is 0 |
+### `mask` 
+It is used to determine which shape should be displayed or not
 
 1. Black (fill="black") → Fully Transparent
 
-Any black area in the mask completely hides the corresponding part of the element.
+The shape, images or text will not be visible inside the masked shape.
 
 2. White (fill="white") → Fully Visible
 
-Any white area in the mask fully reveals the corresponding part of the element.
+The shape, images or text will be visible inside the masked shape.
 
 3. Gray (fill="gray") → Partial Transparency
 
@@ -108,9 +120,20 @@ If a mask doesn’t fully cover an element with white or gray, the default black
 
 **patternUnits**: It can either be *userSpaceOnUse* or *object...*
 
-It is set to *object...* by default meaning it does not fill up the width and height element that is reference with the pattern tile.
+It is set to **ObjectBoudingBox** by default. It fills up the shape relatively to it own width and height.
+   **How pattern width and height work**
+1. The value of width and height of the pattern falls between **0 and 1 (as 0.1 means 10%, 0.2 means 20% ... n), the percentage is calculated relative to the shape that contains the pattern's `id 
+`<pattern width="0.1" height="0.1">
+`</pattern>`
 
-**userSpaceOnUse**: fill up the width and height that is reference with the pattern tile.
+**How width and height of pattern children behaves**
+
+The value of the width and height is more intuitive when the value is:
+1. in percentage, that is relative to proportion of the pattern width and height, where 1% occupies 1% of the pattern width/height.
+
+2. In integer, that is relative to the proportion of width and height shape that contain the pattern **id**.
+
+**userSpaceOnUse**: fills up the shape relatively to the **SVG** viewBox.
 
 
 `<defs>
@@ -125,19 +148,18 @@ It is set to *object...* by default meaning it does not fill up the width and he
 **The `rect` element inside the pattern element share the width and height for themselves.**
 
 
-### SVG
+### switch 
+works as the regular switch statement, it return one of what meet the condition
 
-
-### switch : works as the regular switch statement, it return one of what meet the condition
-
-#### Attributes to Use:
+#### Attributes to Use
 
 **requiredFeatures**: Checks if a specific feature is supported by the browser.
 
 **requiredExtensions**: Checks if a specific extension is supported.
 
 **systemLanguage**: Matches based on the language of the user’s system.
-#### **Using** `systemLanguage`
+
+ **Using** `systemLanguage`
 
 `<svg width="200" height="100">
   `<switch>
@@ -149,7 +171,7 @@ It is set to *object...* by default meaning it does not fill up the width and he
 
 **The content that pass the test fit relative to the `SVG` width and height.**
 
-### Using `requiredFeatures` 
+**Using** `requiredFeatures` 
 
 `requireFeatures` is not reliable in most browsers as it does not actually rely on the condition giving rather it just runs the first condition.
 
@@ -175,7 +197,8 @@ It is set to *object...* by default meaning it does not fill up the width and he
 
 **Note**: The attributes of `switch` as not consistent and reliable as many browser does not check for the validation of the condition (Same thing applicable to `requireExtension`. 
 
-### Symbol : basically use for re-using shapes 
+### Symbol
+basically use for re-using shapes 
 
 `<symbol id="circleIcon" viewBox="0 0 50 50">
    `<circle cx="25" cy="25" r="30" fill="blue" />
@@ -184,3 +207,20 @@ It is set to *object...* by default meaning it does not fill up the width and he
  // `<use href="#circleIcon" x="0" y="0" />`
 
 **Note**: Ensure to use the `xlink:href` (for old browser) or `href` (updated browser) when using the `use` property. 
+
+### clipPath
+
+clipPath is used to specify the part of the shape that will be visible. 
+
+Clipping is when you remove a part from an element.
+
+For clipping, we use the `<clipPath>` element.
+
+Every path/element inside a `<clipPath>` element is inspected and evaluated. Then every part of the target that lies OUTSIDE of this area will NOT be rendered. In other words: Anything outside the path is hidden and anything inside is shown!
+
+`<defs>
+    `<clipPath id="cut-bottom">
+      `<rect x="0" y="0" width="200" height="50" />
+    `</clipPath>
+  `</defs>
+  `<circle cx="100" cy="100" r="100" fill="red" clip-path="url(#cut-bottom)" />`
