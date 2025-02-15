@@ -246,6 +246,8 @@
   "active": "b596624f06130c7e",
   "lastOpenFiles": [
     "Screenshot_2025-02-15-12-25-51-15_e3c1f266f17b29c7b40472751f031275.jpg",
+    "images/Screenshot_2025-02-15-12-25-51-15_e3c1f266f17b29c7b40472751f031275.jpg",
+    "images",
     "JavaScript/Repeat.md",
     "XML/SVG Attributes.md",
     "XML/text.md",
@@ -281,7 +283,6 @@
     "DOM",
     "WCAG",
     "JavaScript",
-    "HTML",
-    "CSS Box Model"
+    "HTML"
   ]
 }

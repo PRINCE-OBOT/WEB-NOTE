@@ -160,6 +160,8 @@ The `skewX()` function is used to skew an object along the `x` axis by a `d
 
 **This behaviour is applicable when the pivot is placed outside of the shape or image. While the shape rotates,** it also **skew** by the **sx** or **sy** axis with the highest value.
 
+
 ![[Screenshot_2025-02-15-12-25-51-15_e3c1f266f17b29c7b40472751f031275.jpg]]
 
+![[Screenshot_2025-02-15-12-25-51-15_e3c1f266f17b29c7b40472751f031275.jpg]]
 **Note** the scale **sx** and **sy** values should not be the same to get the expected **3D** effects.
