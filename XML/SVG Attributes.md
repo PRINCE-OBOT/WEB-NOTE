@@ -109,11 +109,14 @@ Assume one object is placed with x="5" and y="5". Then another object contains t
 
 #### Scale() Function
 
-The `scale()` function is used to scale an object by `x` and `y`. If `y` is not provided, it is set to be equal to `x`.
+The `scale(sx, sy)` function is used to scale an object by `x` and `y`. If `y` is not provided, it is set to be equal to `x`.
 
 The `scale()` function is used to change the size of an object. It takes two numbers: the x scale factor and the y scale factor. The x and y scale factors are taken as the ratio of the transformed dimension to the original. For example, 0.5 shrinks the object by 50%.
 **1 is default 
 
+**Flipping shapes**
+scale(1, -1) *vertical scaling*
+scale(-1, 1) *horizontal scaling
 #### Rotate() Function
 
 The `rotate()` function is used to rotate an object by a `degree`.
@@ -121,7 +124,7 @@ The `rotate()` function is used to rotate an object by a `degree`.
 `  <rect x="50" y="5" width="40" height="40" fill="blue" transform="rotate(45)" />`
 
 
-#### SkewX() Function
+#### Skew() Function
 
 The `skewX()` function is used to skew an object along the `x` axis by a `degree`.
 
@@ -130,3 +133,33 @@ The `skewX()` function is used to skew an object along the `x` axis by a `d
 *Providing two coordinates skew value
 `<rect x="5" y="5" width="40" height="40" fill="blue" transform="skewX(30),skewY(30)" />
 
+#### **To combine `translate` and `scale` and get the expected behaviour.
+
+*`Translate` should appear before `scale`*
+
+`translate()
+`scale()`
+
+*When translate is placed after scale, the values of translate(10, 0) is been added base on the scale **sx, sy** value, if scale is (2, 1) the translate value then becomes translate(20, 0)* 
+
+#### **To combine `translate, rotate` and `scale` and get the expected behaviour
+
+*It should be arranged like*
+
+`translate() 
+`rotate() 
+`scale()`
+
+#### **How to combine `translate, scale` and `rotate` get 3D behaviour
+
+*Rotate should appear after scale*
+
+`translate()  
+`scale(2, 1)
+`rotate()
+
+**This behaviour is applicable when the pivot is placed outside of the shape or image. While the shape rotates,** it also **skew** by the **sx** or **sy** axis with the highest value.
+
+![[Screenshot_2025-02-15-12-25-51-15_e3c1f266f17b29c7b40472751f031275.jpg]]
+
+**Note** the scale **sx** and **sy** values should not be the same to get the expected **3D** effects.

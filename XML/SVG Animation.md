@@ -11,7 +11,7 @@ The `<set>` element sets the value of an attribute for a specified duration.
 
 In this example, we create a red circle that starts with a radius of 25, then after 3 seconds the radius will be set to 50:
 `<svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">  <circle cx="50" cy="50" r="25" style="fill:red;">  
- `<set attributeName="r" to="50" begin="3s" />  
+ `<set attributeName="r" to="50" begin="3s" due="4s" />  
 `</svg>
 
 **Code explanation:**
@@ -19,6 +19,7 @@ In this example, we create a red circle that starts with a radius of 25, then af
 - The `attributeName` attribute in the `<set>` element defines which attribute to change
 - The `to` attribute in the `<set>` element defines the new value for the attribute
 - The `begin` attribute in the `<set>` element defines when the animation should start
+- dur attribute defines how long the set style should be applied.
 
 **Note** the shape or image you want to apply the `set` animation must not have a closing tag.
 
@@ -30,7 +31,7 @@ The `<animate>` element animates an attribute of an element.
 The `<animate>` element should be nested inside the target element.
 
 `<svg width="100%" height="100" xmlns="http://www.w3.org/2000/svg">  
-  `<circle cx="50" cy="50" r="50" style="fill:red;">  
+  `<circle cx="50" cy="50" r="50" style="fill:red;"> 
     `<animate      attributeName="cx"  
       begin="0s"  
       dur="8s"  
@@ -53,6 +54,14 @@ The `<animate>` element should be nested inside the target element.
 - The `repeatCount` attribute defines how many times the animation should play (indefinite, numbers(2,5...))
 
 - The `fill="freeze"` attribute defines that the animation should freeze when it comes to its final position
+
+**In place of using *from* and *to* you can use *values* which is more dynamic.
+
+`<animate      attributeName="cx"  
+      begin="0s"  
+      dur="8s"  
+      value = "2; 50; 98"  
+ `/>
 
 ### animateTransform
 

@@ -122,16 +122,47 @@ If a mask doesn’t fully cover an element with white or gray, the default black
 
 It is set to **ObjectBoudingBox** by default. It fills up the shape relatively to it own width and height.
    **How pattern width and height work**
-1. The value of width and height of the pattern falls between **0 and 1 (as 0.1 means 10%, 0.2 means 20% ... n), the percentage is calculated relative to the shape that contains the pattern's `id 
+1. The value of width and height of the pattern falls between **0 and 1(as 0.1 means 10%, 0.2 means 20% ... n), the percentage is calculated relative to the shape that contains the pattern's `id 
 `<pattern width="0.1" height="0.1">
 `</pattern>`
 
-**How width and height of pattern children behaves**
+If the **container** has a width of **50** and height of **50**
 
-The value of the width and height is more intuitive when the value is:
-1. in percentage, that is relative to proportion of the pattern width and height, where 1% occupies 1% of the pattern width/height.
+**0.1** of the pattern width and height which mean 10% of the container is 10%50 = **5**
 
-2. In integer, that is relative to the proportion of width and height shape that contain the pattern **id**.
+This means that the pattern will be duplicated every **5** unit of the container.
+
+So the pattern children intuitive value falls between **0 - 5** (where **5** fills up the pattern and 2.5 is half of it).
+
+**How to find the decimal value for pattern
+
+Use 100% to divide by the number of duplicated pattern.
+
+Let's say I want **6** duplicate of pattern, what to do?
+
+(Divide the value by 100)
+100 / 6 = 16.7 
+
+Convert the result using percentage 
+16.7% = 0.167 
+
+**0.167** becomes the value for the pattern width to duplicate 6 times.
+
+**How to calculate pattern children width and height 
+
+Convert the pattern width and height decimal value to percentage.
+
+*In this case the width and height is of the pattern is **0.167
+
+So, 
+0.167 `*` 100 = 16.7%
+
+Find the aspect ratio of the container.(If the container has a width of 50)
+
+It then becomes, 
+16.7%50 = 8.35
+
+**8.35** becomes the full width of the pattern children.
 
 **userSpaceOnUse**: fills up the shape relatively to the **SVG** viewBox.
 
