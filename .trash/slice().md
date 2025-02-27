@@ -1,0 +1,1 @@
+It returns a new steing

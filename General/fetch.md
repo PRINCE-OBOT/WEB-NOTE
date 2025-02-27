@@ -1,0 +1,1 @@
+fetch is an API. Specifically, it is a part of the fetch API, which is a built in browser API for handling HTTP requests in JavaScript.

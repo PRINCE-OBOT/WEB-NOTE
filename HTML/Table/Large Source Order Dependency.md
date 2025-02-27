@@ -1,0 +1,1 @@
+"Largely source order dependency" in relation to a table means that the way content appears in the HTML source code directly affects how it is presented or read, especially by screen readers and search engines.

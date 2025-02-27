@@ -1,0 +1,1 @@
+Cross-Site Scripting (XSS) is not a programming language. It is a type of security vulnerability that allows attackers to inject malicious scripts into web pages viewed by other users.

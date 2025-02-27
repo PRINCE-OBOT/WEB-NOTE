@@ -1,23 +1,6 @@
 
-### input event
-Helps for automatically displaying or executing the typed data immediately without having to click a button.
 
-**HTML**
-`  <input type="text" />
-    <p></p>
-**script**
-const inp = document.querySelector("input")
-const para = document.querySelector("p")
-     
-     inp.addEventListener("input", (e)=>{
-       para.textContent = e.target.value
-     }) `
 
-### focus event 
-focus event fires when you focus or click on input or textarea but it does not bubbles up.
-
-### focusin 
-Fires when you focus on input or textarea, similar with `focus` but it bubbles up the DOM.
 
 ### focusout
 Fires when you focus out of the input or selected textarea and it bubbles up to the DOM, meaning it propagate.

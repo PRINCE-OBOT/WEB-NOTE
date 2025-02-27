@@ -1,0 +1,1 @@
+Domain name is a human-friendly ID for identifying a website.

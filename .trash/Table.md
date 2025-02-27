@@ -1,0 +1,4 @@
+
+|                    |                                                                                                                                                                                                                                                                                      |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Learning outcomes: | - What tables are for — structuring tabular data.<br>- What tables are not for — layout, or _anything else_.<br>- Basic table syntax — `<table>`, `<tr>`, and `<td>`.<br>- Defining table headers with `<th>`.<br>- Spanning multiple columns and rows with `colspan` and `rowspan`. |

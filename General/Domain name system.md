@@ -1,0 +1,1 @@
+Translate the domain name into an IP address.

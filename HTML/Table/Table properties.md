@@ -1,0 +1,88 @@
+
+### Table element 
+
+|Element|What it is|
+|---|---|
+|`<table>`|The table itself|
+|`<caption>`|The caption for the table. Like a figcaption to a figure.|
+|`<thead>`|The table header|
+|`<tbody>`|The table body|
+|`<tfoot>`|The table footer|
+|`<tr>`|A table row|
+|`<th>`|A table cell that is a header|
+|`<td>`|A table cell that is data|
+|`<col>`|A column (a no-content element)|
+|`<colgroup>`|A group of columns|
+
+### All Table Related Attributes
+
+|Attribute|Element(s) Found On|What it does|
+|---|---|---|
+|`colspan`|th, td|extends a cell to be as wide as 2 or more cells|
+|`rowspan`|th, td|extends a cell to be as tall as 2 or more cells|
+|`span`|col|Makes the column apply to more to 2 or more columns|
+|`sortable`|table|Indicates the table should allow sorting. **UPDATE:** I’m told this was removed from spec because of lack of implementations.|
+|`headers`|td|space-separated string corresponding to ID’s of the `<th>` elements relevant to the data|
+|`scope`|th|row \| col \| rowgroup \| colgroup (default) – essentially specifies the axis of the header. The default is that a header is heading a column, which is typical, but a row might start with a header also, where you would scope that header to the row or rowgroup.|
+
+### Important Style Rules for Tables
+
+| CSS Property    | Possible values                                                                                                 | What it does                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| --------------- | --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| vertical-align  | baseline  <br>sub  <br>super  <br>text-top  <br>text-bottom  <br>middle  <br>top  <br>bottom  <br>%  <br>length | Aligns the content inside a cell. Works particularly well in tables, although only the top/bottom/middle make much sense in that context.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| white-space     | normal  <br>pre  <br>nowrap  <br>pre-wrap  <br>pre-line                                                         | Controls how text wraps in a cell. Some data may need to be all on one line to make sense.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| border-collapse | collapse  <br>separate                                                                                          | Applied to the table to determine if borders collapse into themselves (sort of like margin collapsing only bi-directional) or not. What if two borders that collapse into each other have conflicting styles (like color)? The styles applied to these types of elements will “win”, in order of “strength”: cell, row, row group, column, column group, table.                                                                                                                                                                                                                                                          |
+| border-spacing  | length                                                                                                          | If `border-collapse` is `separate`, you can specify how far cells should be spaced out from each other. Modern version of `cellspacing` attribute. And speaking of that, `padding` is the modern version of the `cellpadding` attribute.                                                                                                                                                                                                                                                                                                                                                                                 |
+| width           | length                                                                                                          | Width works on table cells just about how you would think it does, except when there is some kind of conflict. For instance if you tell the table itself to be 400px wide then the first cell of a three-cell row to be 100px wide and leave the others alone, that first cell will be 100px wide and the other two will split up the remaining space. But if you tell all three of them to be 10000px wide, the table will still be 400px and it will just give each of them a third of the space. That’s assuming white-space or elements like an image don’t come into play. This is probably a whole post in itself! |
+| border          | length                                                                                                          | Border works on any of the table elements and just about how you would expect. The quirks come in when you collapse the borders. In this case all table cells will have only one border width between them, rather than the two you would expect them to have (border-right on the first cell and border-left on the next cell). In order to remove a border in a collapsed environment, both cells need to “agree” to remove it. Like `td:nth-child(2) { border-right: 0; } td:nth-child(3) { border-left: 0; }` Otherwise, source order/specificity wins which border is shown on which edge.                          |
+| table-layout    | auto  <br>fixed                                                                                                 | `auto` is the default. The width of the table and its cells depends on the content inside. If you change this to `fixed`, equal width is distributed among the data cell. **Note** You must provide the `width` of the table and the `table-layout : fixed;` is always applied to the `table` element.                                                                                                                                                                                                                                                                                                                   |
+
+### The Table Stack
+
+![[Pasted image 20250226110023.jpg]]
+What this image means is, **table data** styling for `background color` will always overwrite **table** style as **table data** is on top.
+
+### Default Styles / User Agent Stylesheet
+
+`table { display: table; border-collapse: separate; border-spacing: 2px; border-color: gray } 
+
+`thead { display: table-header-group; vertical-align: middle; border-color: inherit } 
+
+`tbody { display: table-row-group; vertical-align: middle; border-color: inherit }
+
+`tfoot { display: table-footer-group; vertical-align: middle; border-color: inherit } 
+
+`table > tr { vertical-align: middle; } 
+
+`col { display: table-column } 
+
+`colgroup { display: table-column-group } 
+
+`tr { display: table-row; vertical-align: inherit; border-color: inherit } 
+
+`td, th { display: table-cell; vertical-align: inherit }
+
+`th { font-weight: bold } caption { display: table-caption; text-align: -webkit-center }
+## Other Explanation 
+
+|   |
+|---|
+|- What tables are for — structuring tabular data.  <br>- What tables are not for — layout, or _anything else_.  <br>- Basic table syntax — `<table>`, `<tr>`, and `<td>`.  <br>- Defining table headers with `<th>`.  <br>- Spanning multiple columns and rows with `colspan` and `rowspan`.|
+
+`colspan` or `rowspan` is applied on the `td` or `th` tag.
+
+**colspan** default is 1, if increased it merge the column by the number of the value provided.
+
+**rowspan** default is 1, if increased it flexes the row below to align next to it.
+
+### Styling
+
+Border between table data is 2px by default. 
+
+*Use border-spacing property to edit it.
+
+`border-spacing`
+
+*Use border-collape to remove the border.*
+
+`border-collapse : collapse`

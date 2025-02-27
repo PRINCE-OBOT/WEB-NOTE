@@ -2,17 +2,17 @@ It is used to generate smooth transition of colours in a shape.
 
 ### Linear Gradient 
 
-|   |   |
-|---|---|
-|id|Required. Defines a unique id for the <linearGradient> element|
-|x1|The x position of the starting point of the vector gradient. Default is 0%|
-|x2|The x position of the ending point of the vector gradient. Default is 100%|
-|y1|The y position of the starting point of the vector gradient. Default is 0%|
-|y2|The y position of the ending point of the vector gradient. Default is 0%|
-|spreadMethod|Defines the spread method of the gradient. Possible values: "pad", "reflect", "repeat". Default is "pad"|
-|href|Defines a reference to another <linearGradient> element that will be used as a template|
-|gradientUnits|Defines the coordinate system for x1, x2, y1, y2. Possible values: "userSpaceOnUse" and "objectBoundingBox". Default is "objectBoundingBox"|
-|gradientTransform|Defines additional transformation to the gradient coordinate system|
+|                   |                                                                                                                                             |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| id                | Required. Defines a unique id for the <linearGradient> element                                                                              |
+| x1                | The x position of the starting point of the vector gradient. Default is 0%                                                                  |
+| x2                | The x position of the ending point of the vector gradient. Default is 100%                                                                  |
+| y1                | The y position of the starting point of the vector gradient. Default is 0%                                                                  |
+| y2                | The y position of the ending point of the vector gradient. Default is 0%                                                                    |
+| spreadMethod      | Defines the spread method of the gradient. Possible values: "pad", "reflect", "repeat". Default is "pad"                                    |
+| href              | Defines a reference to another <linearGradient> element that will be used as a template                                                     |
+| gradientUnits     | Defines the coordinate system for x1, x2, y1, y2. Possible values: "userSpaceOnUse" and "objectBoundingBox". Default is "objectBoundingBox" |
+| gradientTransform | Defines additional transformation to the gradient coordinate system                                                                         |
 **Note**: linear gradient property always exist inside of a `defs` element.
 
 `<defs>`
