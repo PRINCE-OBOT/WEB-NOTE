@@ -109,16 +109,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DOM/Event Handler/tabindex.md",
+                "file": "DOM/Event/MouseEvent/MouseEvent && Properties.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "tabindex"
+              "title": "MouseEvent && Properties"
+            }
+          },
+          {
+            "id": "6661539da7747052",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Cascading Style Sheet/flex.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "flex"
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -193,7 +207,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "DOM/Event Handler/tabindex.md",
+            "file": "JavaScript/Objects.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -243,52 +257,53 @@
       "zk-prefixer:Create new unique note": false
     }
   },
-  "active": "b596624f06130c7e",
+  "active": "6661539da7747052",
   "lastOpenFiles": [
-    "DOM/Event Handler/focus event.md",
-    "DOM/Event Handler/error.md",
-    "DOM/Event Handler/tabindex.md",
-    "DOM/Event Handler/focusin event.md",
-    "DOM Manipulation.md",
-    "DOM/Event Handler/input event.md",
+    "JavaScript/Callback function.md",
+    "Cascading Style Sheet/flex.md",
+    "JavaScript/nullish coalescing, OR operator.md",
+    "JavaScript/String method.md",
+    "JavaScript/Math method.md",
+    "JavaScript/Array method.md",
+    "JavaScript/Built-in-function/eval().md",
+    "Check Later/Reduce Shorthand.md",
+    "JavaScript/Built-in-function/Array.isArray.md",
+    "JavaScript/Built-in-function/Array().md",
+    "JavaScript/Built-in-function/new Date().md",
+    "JavaScript/Built-in-function/Math.max.apply().md",
+    "JavaScript/Built-in-function/Math.abs().md",
+    "JavaScript/Objects.md",
+    "JavaScript/Sort.md",
+    "JavaScript/Repeat.md",
+    "JavaScript/Double Negation.md",
+    "JavaScript/map, filter, reduce && usecase.md",
+    "JavaScript/innerHTML.md",
+    "JavaScript/concat.md",
+    "JavaScript/clearInterval.md",
+    "JavaScript/Call.md",
+    "JavaScript/Built-in-function/new Set().md",
+    "JavaScript/Built-in-function/Array.prototype.md",
+    "JavaScript/Array method that modify the array itself.md",
+    "JavaScript/slice.md",
+    "Basic Term",
+    "DOM/DOM Level",
+    "Check Later/Reduce shorthand",
+    "Check Later/Reduce shorthand",
+    "Check Later",
+    "DOM/DOM Nodes and Manipulation",
+    "images/Screenshot_2025-02-15-12-25-51-15_e3c1f266f17b29c7b40472751f031275.jpg",
+    "DOM/Event/KeyboardEvent",
+    "DOM/Event/MouseEvent",
+    "DOM/Event",
+    "IMG_20250228_072542.jpg",
     "Pasted image 20250226110023.jpg",
     "Pasted image 20250217125059.png",
     "Pasted image 20250217154705.png",
     "Pasted image 20250217192537.png",
     "Pasted image 20250217155953.png",
-    "JavaScript/innerHTML.md",
-    "DOM/Event Handler",
-    "DOM/Untitled.md",
-    "DOM/closest.md",
-    "DOM/Other method of selecting element to the DOM.md",
-    "HTML/Table/nbsp.md",
-    "General/Cross-site Scripting.md",
-    "JavaScript/Math.ceil().md",
-    "HTML/Table/col && colgroup.md",
-    "HTML/Table/Table properties.md",
-    "HTML/Table/Making Semantic Element behave like table.md",
-    "HTML/Table/Large Source Order Dependency.md",
-    "JavaScript/RegExp.md",
-    "JavaScript/Pattern.md",
-    "JavaScript/Match and Patterns.md",
-    "HTML/Table/The id and header attributes.md",
-    "HTML/Table/The scope attribute.md",
-    "HTML/Adding structure.md",
-    "HTML/Table/Caption.md",
-    "HTML/Table.md",
-    "HTML/Table/border-collape.md",
-    "HTML/Table",
-    "General",
+    "DOM/Event/Form Events (Event)",
     "Screenshot_2025-02-15-12-25-51-15_e3c1f266f17b29c7b40472751f031275.jpg",
-    "images/Screenshot_2025-02-15-12-25-51-15_e3c1f266f17b29c7b40472751f031275.jpg",
-    "images",
-    "Domain name",
     "Pasted image 20250204104649.jpg",
-    "XML",
-    "Untitled.canvas",
-    "Untitled 1",
-    "Exercises",
-    "JavaScript/Exercises",
-    "DOM"
+    "Untitled.canvas"
   ]
 }
