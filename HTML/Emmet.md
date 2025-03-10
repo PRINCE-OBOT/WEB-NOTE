@@ -173,7 +173,7 @@ It is used to insert number in a element or attributes.
 `<div class="classOne classTwo"></div>`
 
 
-### Addin Multiple Numbering : $
+### Adding Multiple Numbering : $
 
 **This Emmet**
 `ul>li.item$$$*2`

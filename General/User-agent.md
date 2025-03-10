@@ -1,0 +1,5 @@
+User-agent stylesheets are the default styles applied by web browsers to HTML elements before any custom styles (such as those you define with CSS) are applied. These styles are built into the browser and are used to ensure that a webpage displays in a readable and usable way even before any specific styles are added by the web developer.
+
+For example, most browsers apply default margins and padding to elements like `<body>`, `<h1>`, and `<p>` to make sure text isn't clumped together at the edges of the page. They might also define a default font family or font size for text, link colors, and the appearance of form elements.
+
+If you inspect an element using developer tools in a browser, you can often see user-agent styles as the base styles that the browser applies, and then any styles you define in your own CSS will override or extend those default styles.

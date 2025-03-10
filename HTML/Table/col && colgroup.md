@@ -1,4 +1,4 @@
-In an HTML table, the <col> element is used to define column properties for one or more columns. It works with the `<colgroup>` element to apply styling or attributes to entire columns instead of setting them individually on each `<td>` or `<th>.
+In an HTML table, the `<col>` element is used to define column properties for one or more columns. It enclosed `<colgroup>` element to apply styling or attributes to entire columns instead of setting them individually on each `<td>` or `<th>.
 
 
 ## Accepted Properties

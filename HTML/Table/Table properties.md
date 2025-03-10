@@ -65,24 +65,59 @@ What this image means is, **table data** styling for `background color` will alw
 `th { font-weight: bold } caption { display: table-caption; text-align: -webkit-center }
 ## Other Explanation 
 
-|   |
-|---|
-|- What tables are for — structuring tabular data.  <br>- What tables are not for — layout, or _anything else_.  <br>- Basic table syntax — `<table>`, `<tr>`, and `<td>`.  <br>- Defining table headers with `<th>`.  <br>- Spanning multiple columns and rows with `colspan` and `rowspan`.|
+## [What is a table?](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics#what_is_a_table)
 
-`colspan` or `rowspan` is applied on the `td` or `th` tag.
+A table is a structured set of data made up of rows and columns (**tabular data**). A table allows you to quickly and easily look up values that indicate some kind of connection between different types of data, for example a person and their age, or a day of the week, or the timetable for a local swimming pool.
+
+### Why is it a bad idea to use HTML table for page layout 
+
+Using tables for layout in HTML is a bad idea because it goes against modern web development best practices. Here’s why:
+
+1. **Not Semantically Correct** – Tables are meant for tabular data, not for structuring a webpage. Using `<table>` for layout confuses browsers, search engines, and assistive technologies like screen readers.
+    
+2. **Poor Accessibility** – Screen readers read tables row by row, making it harder for visually impaired users to navigate a layout built with tables.
+    
+3. **Difficult to Maintain** – If you need to modify the design, you’ll have to update multiple `<td>` and `<tr>` elements instead of just adjusting CSS.
+    
+4. **Not Responsive** – Tables do not adapt well to different screen sizes, making them a nightmare for mobile responsiveness compared to using CSS Grid or Flexbox.
+    
+5. **Slower Page Load** – Tables require more HTML and nested elements, increasing page size and slowing down rendering.
+    
+
+### When Should You Use Tables?
+
+Tables are fine for displaying **tabular data**, like spreadsheets, schedules, or reports. If you're structuring a layout, it's better to use **CSS (Flexbox or Grid)** instead.
+
+Do you want an example comparing a table-based layout with a modern CSS layout?
+## caption
+
+The `<caption>` element in an HTML table is used to provide a title or description for the table. It helps users understand what the table is about. By default, the caption is displayed above the table, but you can style it using CSS to change its position.
+
+### Example:
+
+```html
+<table border="1">
+  <caption>Student Grades</caption>
+  <tr>
+    <th>Name</th>
+    <th>Math</th>
+    <th>Science</th>
+  </tr>
+  <tr>
+    <td>Alice</td>
+    <td>90</td>
+    <td>85</td>
+  </tr>
+  <tr>
+    <td>Bob</td>
+    <td>80</td>
+    <td>88</td>
+  </tr>
+</table>
+```
+
+---
 
 **colspan** default is 1, if increased it merge the column by the number of the value provided.
 
 **rowspan** default is 1, if increased it flexes the row below to align next to it.
-
-### Styling
-
-Border between table data is 2px by default. 
-
-*Use border-spacing property to edit it.
-
-`border-spacing`
-
-*Use border-collape to remove the border.*
-
-`border-collapse : collapse`

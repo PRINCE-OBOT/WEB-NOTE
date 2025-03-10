@@ -102,4 +102,39 @@ This is like: **"The house is now empty; time to turn off the lights."**
 3. `beforeunload` → **User is about to leave.**
 4. `unload` → **User has left the page.**
 
-Would you like any real-world examples to make it even clearer?
+---
+
+### 5. **`readystatechange`** 
+
+The **`readystatechange`** event is a built-in event in JavaScript that fires whenever the **`document.readyState`** property changes. It helps track different stages of a webpage’s loading process.
+
+### How It Works
+
+The browser updates **`document.readyState`** as the page loads, going through these phases:
+
+1. **`loading`** – The HTML is still being loaded and parsed. The DOM is not ready yet.
+2. **`interactive`** – The HTML is fully loaded, and the DOM is ready, but images, CSS, and sub-resources may still be loading.
+3. **`complete`** – Everything, including images and CSS, has fully loaded.
+
+### Example
+
+```javascript
+document.addEventListener('readystatechange', () => {
+  console.log(`ReadyState: ${document.readyState}`);
+  
+  if (document.readyState === 'interactive') {
+    console.log('DOM is ready but images and styles may still be loading.');
+  }
+
+  if (document.readyState === 'complete') {
+    console.log('Everything is fully loaded.');
+  }
+});
+```
+
+### When to Use `readystatechange`
+
+- If you need to execute code **as soon as the DOM is ready** (before images/styles are loaded), check for `"interactive"`.
+- If you want to know **when everything is fully loaded**, checking for `"complete"` is similar to using the **`load`** event.
+
+However, the **`load`** event is usually more reliable for ensuring that all resources are 100% loaded.
