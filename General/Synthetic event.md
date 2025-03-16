@@ -14,8 +14,13 @@ A **synthetic event** is an event that is **not triggered directly by user inter
     - Example:
         
         ```javascript
-        const event = new Event("click"); // Create a synthetic click event
-        document.querySelector("button").dispatchEvent(event); // Fire the event
+
+const event = new Event("click"); // Create a synthetic click event
+
+const btn = document.querySelector("button")
+        
+btn.addEventListener('click')      
+btn.dispatchEvent(event); // Fire the event
         ```
         
     - This will make it **look like** the button was clicked, even though the user didn’t actually click it.

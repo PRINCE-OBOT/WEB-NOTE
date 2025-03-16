@@ -62,7 +62,7 @@ greet("Prince Obot");
 Use return when you want to reuse the specific code in the program.
 use console when you want to display the output.
 
-## Map
+## new Map
 map are use in place of object when you don't want your code to rely on just retrieving information with just string as it is in object.
 
 **map parameters**

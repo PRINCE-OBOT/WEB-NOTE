@@ -52,6 +52,7 @@ console.log(evens); // [2, 4]
 - **Applies** a function to each element and returns a transformed array.
 
 ```js
+
 let nums = [1, 2, 3];
 let squared = nums.map(n => n * n);
 console.log(squared); // [1, 4, 9]
@@ -64,6 +65,8 @@ console.log(squared); // [1, 4, 9]
 - **Flattens** nested arrays into a single array.
 
 ```js
+
+
 let nested = [1, [2, [3, 4]]];
 console.log(nested.flat(2)); // [1, 2, 3, 4]
 ```
@@ -75,6 +78,7 @@ console.log(nested.flat(2)); // [1, 2, 3, 4]
 - **Combines** mapping and flattening in one step.
 
 ```js
+
 let words = ["Hello world", "JavaScript"];
 let splitWords = words.flatMap(word => word.split(" "));
 console.log(splitWords); // ["Hello", "world", "JavaScript"]
@@ -87,6 +91,7 @@ console.log(splitWords); // ["Hello", "world", "JavaScript"]
 - **Returns** a sorted copy of the array.
 
 ```js
+
 let nums = [3, 1, 4, 2];
 console.log(nums.toSorted()); // [1, 2, 3, 4]
 ```

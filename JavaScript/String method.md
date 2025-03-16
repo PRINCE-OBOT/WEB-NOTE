@@ -287,5 +287,14 @@ console.log(`Hello, ${name}!`); // "Hello, John!"
 ```
 
 ---
+## 14. **toString**
 
-This covers all major JavaScript string methods with examples. Let me know if you need further clarification!
+- It is used to convert a number to string.
+
+- It is also used for converting a decimal number to other number base, example (hex, bin, octal)
+
+```js
+
+(128).toString(16) //Number to hex(16), octal (8) or binary (2)
+```
+

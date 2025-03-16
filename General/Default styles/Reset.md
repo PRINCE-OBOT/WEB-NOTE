@@ -1,0 +1,5 @@
+### [Reset](https://mattbrictson.com/blog/css-normalize-and-reset#reset)
+
+On the other hand, a _reset_ stylesheet is the nuclear option: it removes margins, paddings, and text styles across the board. HTML elements completely lose their visual differentiation: `<p>` no longer looks like a paragraph, `<h1>` no longer looks like heading, `<ul>` is no longer a bulleted list, and so on. HTML pages styled with a reset stylesheet are no longer very legible or accessible; the onus is now on the developer to implement a design to add those capabilities back.
+
+This approach is pretty severe, but it has its advantages because it removes the “whack-a-mole” problem of CSS completely. It turns the web into a blank canvas, such that the CSS you write is now purely additive, rather than potentially in conflict with something preexisting.

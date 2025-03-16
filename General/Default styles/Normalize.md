@@ -1,0 +1,3 @@
+### [Normalize](https://mattbrictson.com/blog/css-normalize-and-reset#normalize)
+
+Applying a _normalize_ stylesheet means fixing the inconsistencies between browsers while still broadly retaining their default set of styles. In other words, it embraces the goals of the browser default stylesheet – provide a legible, accessible, and responsive experience out of the box – while making CSS development more predictable across browsers.
