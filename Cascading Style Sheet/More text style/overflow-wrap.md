@@ -40,5 +40,3 @@ p {
 
 - `break-word` **only breaks when necessary** (e.g., at the container’s edge).
 - `anywhere` **allows breaks even when not necessary**, making text more flexible.
-
-Would you like a practical test to see the differences in action?

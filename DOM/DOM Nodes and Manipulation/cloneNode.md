@@ -2,7 +2,8 @@
 
 ## Syntax:
 
-```
+```js
+
 const clonedElement = element.cloneNode(deep);
 ```
 
@@ -13,7 +14,8 @@ const clonedElement = element.cloneNode(deep);
 
 ### Example 1: Cloning Without Children (false)
 
-```
+```js
+
 const original = document.querySelector("div");
 const clone = original.cloneNode(false);
 document.body.appendChild(clone);
@@ -25,7 +27,8 @@ document.body.appendChild(clone);
 
 ### Example 2: Cloning With Children (true)
 
-```
+```js
+
 const deepClone = original.cloneNode(true);
 
 document.body.appendChild(deepClone);

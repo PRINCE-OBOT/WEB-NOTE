@@ -1,8 +1,4 @@
-### **Understanding `toggle()`, `add()`, and `remove()` in `classList`**
 
-All three methods—`toggle()`, `add()`, and `remove()`—belong to the **`classList` API**, which allows you to manipulate CSS classes on an element.
-
----
 
 ## **1. `toggle(className)`**
 
@@ -86,48 +82,57 @@ This ensures the class is removed **when the condition is met**.
 
 Aside from `toggle()`, `add()`, and `remove()`, the `classList` API provides other useful methods for managing CSS classes in JavaScript:
 
-### **Other `classList` Methods:**
 
-1. **`contains(className)`**
+
+# 4. **`contains(className)`**
     
-    - Checks if an element has a specific class.
-    - Returns `true` if the class exists, otherwise `false`.
+- Checks if an element has a specific class.
+
+- Returns `true` if the class exists, otherwise `false`.
     
     ```js
-    if (element.classList.contains('hidden')) {
+    
+if (element.classList.contains('hidden')) {
         console.log('Element is hidden');
     }
     ```
     
-2. **`replace(oldClass, newClass)`**
+
+
+# 5. **`replace(oldClass, newClass)`**
     
-    - Replaces an existing class with a new one.
-    - If `oldClass` doesn’t exist, nothing happens.
+
+- Replaces an existing class with a new one.
+    
+- If `oldClass` doesn’t exist, nothing happens.
     
     ```js
     element.classList.replace('old-class', 'new-class');
     ```
     
-3. **`item(index)`**
+# 6. **`item(index)`**
     
-    - Retrieves the class at a specific index (like an array).
-    - Returns `null` if the index is out of bounds.
+
+- Retrieves the class at a specific index (like an array).
+    
+- Returns `null` if the index is out of bounds.
     
     ```js
     console.log(element.classList.item(0)); // Logs the first class
     ```
     
-4. **`length` (Property, not a method)**
+# 7. **`length` (Property, not a method)**
     
-    - Returns the number of classes on the element.
+- Returns the number of classes on the element.
     
     ```js
     console.log(element.classList.length); // Number of classes
     ```
     
-5. **`forEach(callback)`**
+# 8. **`forEach(callback)`**
     
-    - Iterates over all classes applied to an element.
+    
+- Iterates over all classes applied to an element.
     
     ```js
     element.classList.forEach(cls => {
@@ -135,7 +140,3 @@ Aside from `toggle()`, `add()`, and `remove()`, the `classList` API provides oth
     });
     ```
     
-
-### **Summary of All `classList` Methods**
-
-Would you like practical examples for any of these?

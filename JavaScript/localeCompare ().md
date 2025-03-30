@@ -36,6 +36,6 @@ ______but_
 
 `"ñ".localeCompare("n", "en", {sensitivity : "base"})`// 0 
 
-`"N".localeCompare("n", "en", "sensitivity: "base"})` // 0
+`"N".localeCompare("n", "en", {"sensitivity: "base"})` // 0
 
 

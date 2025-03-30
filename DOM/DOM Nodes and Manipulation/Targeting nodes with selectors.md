@@ -1,6 +1,7 @@
 
 ## Using .querySelector()
-```
+```js
+
 // Select by tag name
 const paragraphs = document.querySelectorAll("p");
 

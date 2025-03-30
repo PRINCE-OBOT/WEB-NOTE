@@ -2,7 +2,7 @@
 
 ### 1.
 
-When a parent has `mix-blend-mode` property, it affects not just itself but also its children by default. The children will blend **relatively to the parent's background**, unless they have their own `mix-blend-mode`, which then blends them with the parent instead.
+When a parent has `mix-blend-mode` property, it affects not just itself but also its children by default. The children will blend **relatively to the parent's background**, unless they have their own `mix-blend-mode`, which then blends them with there direct parent background instead.
 ```html
 
 <div class="container">

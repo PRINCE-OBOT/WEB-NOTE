@@ -80,3 +80,22 @@ If a box inside a container is `width: 40%`, it will shrink or expand based on t
 
 
 
+# 7. ch
+
+
+1. **Based on the width of the character "0" (zero)** in the current font.
+    
+2. Helps in sizing text fields, containers, or elements relative to text characters.
+    
+3. Useful for setting widths for inputs, ensuring it feels text-length based (like a form field that fits about _n_ characters).
+    
+4. It depends on the font — change the font, and `ch` measurement changes.
+    
+5. It doesn’t account for wider characters (like 'W') or narrower ones (like 'i'), only the zero character width.
+    
+6. Works well for monospace fonts (where each character is the same width) but less predictable with variable fonts.
+    
+7. Scales with font-size — increase font size, `ch` grows too.
+    
+8. Can be used for widths, heights (rare), padding, margins — wherever length units are allowed.
+    

@@ -1,6 +1,7 @@
 You can add inline styles to an element using the .style property in JavaScript.
 
-```
+```js
+
 const p = document.querySelector("p");
 p.style.color = "red";
 p.style.fontSize = "20px";

@@ -2,6 +2,8 @@
 
 **When you need an element inside a constrained container to stretch across the full viewport width, you can use:
 
+>**Note** when the dimensions of the margin is % (percentage) it is relative to the parent **width**, while **px** is relative to the **height**.
+
 ```css
 .full-width {
   margin-left: calc(50% - 50vw);

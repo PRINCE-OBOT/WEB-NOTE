@@ -104,35 +104,21 @@
             }
           },
           {
-            "id": "b596624f06130c7e",
+            "id": "7e3413c4eecf33da",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DOM/Event/MouseEvent/MouseEvent && Properties.md",
+                "file": "Cascading Style Sheet/Advanced selectors/Specificity calculation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "MouseEvent && Properties"
-            }
-          },
-          {
-            "id": "6661539da7747052",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "General/More text style/Text-shadow.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Text-shadow"
+              "title": "Specificity calculation"
             }
           }
         ],
-        "currentTab": 7
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -160,7 +146,7 @@
         "state": {
           "type": "search",
           "state": {
-            "query": "Text transform ",
+            "query": "",
             "matchingCase": false,
             "explainSearch": false,
             "collapseAll": false,
@@ -207,14 +193,14 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "General/More text style/Text-shadow.md",
+            "file": "HND 2 (FIRST SEMESTER)/Embedded systems/Question.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
             "showSearch": false,
             "searchQuery": "",
             "backlinkCollapsed": false,
-            "unlinkedCollapsed": true
+            "unlinkedCollapsed": false
           },
           "icon": "links-coming-in",
           "title": "Backlinks"
@@ -226,8 +212,9 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "linksCollapsed": false,
-            "unlinkedCollapsed": true
+            "file": "HND 2 (FIRST SEMESTER)/Embedded systems/Question.md",
+            "linksCollapsed": true,
+            "unlinkedCollapsed": false
           },
           "icon": "links-going-out",
           "title": "Outgoing links"
@@ -238,13 +225,18 @@
         "type": "leaf",
         "state": {
           "type": "outline",
-          "state": {},
+          "state": {
+            "file": "Cascading Style Sheet/Advanced selectors/Specificity calculation.md",
+            "followCursor": false,
+            "showSearch": false,
+            "searchQuery": ""
+          },
           "icon": "lucide-list",
           "title": "Outline"
         }
       }
     ],
-    "currentTab": 0
+    "currentTab": 2
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -257,53 +249,53 @@
       "zk-prefixer:Create new unique note": false
     }
   },
-  "active": "6661539da7747052",
+  "active": "7e3413c4eecf33da",
   "lastOpenFiles": [
-    "General/More text style/Text-tranform.md",
-    "General/More text style/Text-shadow.md",
-    "General/More text style/CSS web Fonts.md",
-    "General/More text style/em, cite, i, strong.md",
-    "Cascading Style Sheet/@/@font-face.md",
-    "General/Synthetic event.md",
-    "General/UI Controls.md",
-    "General/Untitled.md",
-    "General/More text style/Font files.md",
-    "General/More text style",
-    "Cascading Style Sheet/letter-spacing.md",
-    "General/GDPR.md",
-    "Cascading Style Sheet/CSS unit/Line-height.md",
-    "Cascading Style Sheet/rem.md",
-    "Cascading Style Sheet/CSS unit/CSS values.md",
-    "Cascading Style Sheet/CSS unit/Which unit to use.md",
-    "images/Screenshot_2025-02-15-12-25-51-15_e3c1f266f17b29c7b40472751f031275.jpg",
-    "DOM/Event/MouseEvent/MouseEvent && Properties && Parts.md",
-    "DOM/Event/Custom Event.md",
-    "Cascading Style Sheet/CSS unit/Viewport units.md",
-    "Cascading Style Sheet/Untitled.md",
-    "Cascading Style Sheet/@/@media(prefers-color-scheme).md",
-    "Cascading Style Sheet/@",
-    "Cascading Style Sheet/Colors/Color.md",
-    "Cascading Style Sheet/Colors/hex color explanation.md",
+    "Cascading Style Sheet/Advanced selectors/Pseudo element.md",
+    "Cascading Style Sheet/Advanced selectors/Pseudo class.md",
+    "Cascading Style Sheet/Advanced selectors/Combinators.md",
+    "Cascading Style Sheet/Advanced selectors/Specificity calculation.md",
+    "Pasted image 20250330091209.jpg",
+    "Pasted image 20250330091157.jpg",
+    "Pasted image 20250330091126.jpg",
+    "Pasted image 20250330091111.jpg",
+    "Pasted image 20250330090947.jpg",
+    "Pasted image 20250330090849.jpg",
+    "Cascading Style Sheet/More CSS properties/Background.md",
+    "Cascading Style Sheet/Advanced selectors/Pseudo class selector.md",
+    "Cascading Style Sheet/More text style/Clamp.md",
+    "DOM/DOM Nodes and Manipulation/parentNode.md",
+    "DOM/DOM Nodes and Manipulation/Targeting nodes with selectors.md",
+    "Cascading Style Sheet/More CSS properties/shorthand border.md",
+    "Cascading Style Sheet/Pseudo element/where.md",
     "Cascading Style Sheet/Pseudo element/focus.within.md",
-    "Cascading Style Sheet/Colors",
-    "Cascading Style Sheet/CSS unit/Breaking container.md",
-    "Cascading Style Sheet/CSS unit/Maintaining video aspect ratio.md",
-    "Cascading Style Sheet/CSS unit",
-    "Cascading Style Sheet/root vs universal selector.md",
+    "Cascading Style Sheet/Advanced selectors/Pseudo class selectors.md",
+    "Cascading Style Sheet/Attributes selector.md",
+    "Cascading Style Sheet/Advanced selectors",
+    "General/Content Management System.md",
+    "Cascading Style Sheet/@/@media(prefers-color-scheme).md",
+    "Advanced selectors",
+    "Cascading Style Sheet/@/prefers-reduced-transparency.md",
+    "WCAG/World Content Accessibility Guidelines.md",
+    "Cascading Style Sheet/More text style/CSS web Fonts.md",
+    "Cascading Style Sheet/More CSS properties/Opacity.md",
+    "Cascading Style Sheet/Flex.md",
+    "Cascading Style Sheet/-webkit-font-smoothing, text-rendering.md",
+    "Cascading Style Sheet/Visibility.md",
+    "Cascading Style Sheet.md",
+    "DOM/All Events Categories.md",
+    "HTML/WAI-ARIA",
+    "Cascading Style Sheet/More text style/block-size && max-block-size",
+    "HND 2 (FIRST SEMESTER)",
+    "HND 2 (FIRST SEMESTER)/Embedded systems",
+    "General/LINK",
+    "Cascading Style Sheet/More CSS properties",
+    "NYSC MOBILISATION",
+    "HND 2 (FIRST SEMESTER)/Software Architecture and Design",
+    "images/Screenshot_2025-02-15-12-25-51-15_e3c1f266f17b29c7b40472751f031275.jpg",
     "Pasted image 20250226110023.jpg",
-    "Cascading Style Sheet/Pseudo element",
-    "General/Default styles",
-    "General/Bootstrap",
-    "Basic Term",
-    "DOM/DOM Level",
-    "Check Later/Reduce shorthand",
     "IMG_20250228_072542.jpg",
     "Pasted image 20250217125059.png",
-    "Pasted image 20250217154705.png",
-    "Pasted image 20250217192537.png",
-    "Pasted image 20250217155953.png",
-    "Screenshot_2025-02-15-12-25-51-15_e3c1f266f17b29c7b40472751f031275.jpg",
-    "Pasted image 20250204104649.jpg",
     "Untitled.canvas"
   ]
 }

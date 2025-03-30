@@ -10,7 +10,8 @@ can be focused. But with tabindex, you can make any non-focusable element focusa
 
 ## How to make non-focusable element focusable
 
-```
+```html
+
 //The p element becomes focusable.
 <p tabindex="0">Now focusable</p>
 ```
@@ -49,7 +50,8 @@ what the happens?
 
 tabindex="-1" do not get focused with tab index, you can use it if you want to the element to get focused programmatically using the `focus()` event handler.
 
-```
+```html
+
 <p tabindex="-1">Focus programmatically</p>
 
 <Script>

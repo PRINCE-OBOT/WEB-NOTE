@@ -1,3 +1,43 @@
+
+
+
+### **`inline-size`**
+
+#### **What is `inline-size`?**
+
+`inline-size` controls the width of an element, but instead of using the traditional `width` property, it follows the **inline flow direction**, which depends on the document’s writing mode.
+
+- In **English (`writing-mode: horizontal-tb`)**, `inline-size` behaves like `width`.
+    
+- In **Japanese (`writing-mode: vertical-rl`)**, `inline-size` behaves like `height`.
+    
+
+#### **Example of `inline-size` (English writing mode)**
+
+```css
+div {
+  writing-mode: horizontal-tb; /* Default in English */
+  inline-size: 300px;
+  background: lightblue;
+}
+```
+
+This sets the width to `300px`, just like `width: 300px`.
+
+#### **Example of `inline-size` (Japanese writing mode)**
+
+```css
+div {
+  writing-mode: vertical-rl; /* Text flows vertically */
+  inline-size: 300px;
+  background: lightblue;
+}
+```
+
+Here, `inline-size` acts like `height` because text flows from top to bottom.
+
+
+
 ### **What is `max-inline-size` in CSS?**
 
 `max-inline-size` is a **logical property** in CSS that sets the **maximum width** of an element **based on the text direction** (LTR or RTL). It works like `max-width` but respects the **writing mode** of the content.
@@ -58,4 +98,3 @@ max-inline-size: <value>;
 2. **Adapts to Vertical Text** – Useful for East Asian languages like Chinese, Japanese, and Korean when using vertical writing modes.
 3. **Future-Proof and Readable** – Keeps styles clean and flexible for different layouts.
 
-Would you like a practical example to see how it behaves?

@@ -298,3 +298,14 @@ console.log(`Hello, ${name}!`); // "Hello, John!"
 (128).toString(16) //Number to hex(16), octal (8) or binary (2)
 ```
 
+
+# 15. `String.fromCharCode()`
+
+You can convert a number to its ASCII character in JavaScript using `String.fromCharCode()`.
+
+**Example:**
+
+```js
+String.fromCharCode(65) // returns "A" because ASCII code 65 = "A"
+String.fromCharCode(97) // returns "a" because ASCII code 97 = "a"
+```

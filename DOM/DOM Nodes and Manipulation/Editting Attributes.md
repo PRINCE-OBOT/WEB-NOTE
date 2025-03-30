@@ -1,7 +1,8 @@
 **You can modify an element’s attributes dynamically using the `.setAttribute(), .getAttribute(), and .removeAttribute() methods.`
 
 
-```
+```js
+
 const element = document.querySelector("div");
 
 // Set class attribute
